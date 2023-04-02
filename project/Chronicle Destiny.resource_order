@@ -1,8 +1,18 @@
 {
   "FolderOrderSettings": [
-    {"name":"asset","order":17,"path":"folders/asset.yy",},
-    {"name":"code","order":16,"path":"folders/code.yy",},
-    {"name":"room","order":18,"path":"folders/room.yy",},
+    {"name":"asset","order":2,"path":"folders/asset.yy",},
+    {"name":"Fonts","order":2,"path":"folders/asset/Fonts.yy",},
+    {"name":"room","order":3,"path":"folders/room.yy",},
   ],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"spr_wall","order":1,"path":"sprites/spr_wall/spr_wall.yy",},
+    {"name":"fnt_btn","order":3,"path":"fonts/fnt_btn/fnt_btn.yy",},
+    {"name":"fnt_dbug","order":2,"path":"fonts/fnt_dbug/fnt_dbug.yy",},
+    {"name":"fnt_subtitle","order":1,"path":"fonts/fnt_subtitle/fnt_subtitle.yy",},
+    {"name":"wall","order":1,"path":"objects/wall/wall.yy",},
+    {"name":"splash_ctr","order":2,"path":"objects/splash_ctr/splash_ctr.yy",},
+    {"name":"bg_grid","order":1,"path":"sprites/bg_grid/bg_grid.yy",},
+    {"name":"dbug","order":2,"path":"objects/dbug/dbug.yy",},
+    {"name":"rm_test","order":1,"path":"rooms/rm_test/rm_test.yy",},
+  ],
 }

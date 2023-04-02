@@ -12,7 +12,9 @@
   "defaultScriptType": 1,
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"asset","folderPath":"folders/asset.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sprite","folderPath":"folders/asset/sprite.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"code","folderPath":"folders/code.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/asset/Fonts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"room","folderPath":"folders/room.yy",},
   ],
   "IncludedFiles": [],
@@ -22,9 +24,22 @@
     "IDEVersion": "2023.2.1.75",
   },
   "resources": [
+    {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},},
+    {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
+    {"id":{"name":"fnt_btn","path":"fonts/fnt_btn/fnt_btn.yy",},},
+    {"id":{"name":"fnt_dbug","path":"fonts/fnt_dbug/fnt_dbug.yy",},},
+    {"id":{"name":"fnt_subtitle","path":"fonts/fnt_subtitle/fnt_subtitle.yy",},},
+    {"id":{"name":"player","path":"objects/player/player.yy",},},
+    {"id":{"name":"wall","path":"objects/wall/wall.yy",},},
+    {"id":{"name":"splash_ctr","path":"objects/splash_ctr/splash_ctr.yy",},},
+    {"id":{"name":"bg_grid","path":"sprites/bg_grid/bg_grid.yy",},},
+    {"id":{"name":"dbug","path":"objects/dbug/dbug.yy",},},
+    {"id":{"name":"fnt_title","path":"fonts/fnt_title/fnt_title.yy",},},
+    {"id":{"name":"rm_splash","path":"rooms/rm_splash/rm_splash.yy",},},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_splash","path":"rooms/rm_splash/rm_splash.yy",},},
     {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
   ],
   "TextureGroups": [
