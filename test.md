@@ -59,9 +59,9 @@ function helloWorld() {
 
 ---
 
-```js
 ### GameMaker Language
 
+```js
 /// @function                is_same_object(inst_id, object_id)
 /// @description             Check if the given instance belongs to the given object.
 /// @param {Id.Instance}     inst_id    The unique instance ID value of the instance to check.
