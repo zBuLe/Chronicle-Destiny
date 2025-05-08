@@ -1,5 +1,5 @@
 ---
-title: Chronicle Destiny 2
+title: Chronicle Destiny
 ---
 
 <div class="gm4html5_div_class" id="gm4html5_div_id">
