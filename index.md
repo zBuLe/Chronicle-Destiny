@@ -21,7 +21,3 @@ title: Chronicle Destiny
 | Jump           | Spacebar / W         | A Button             | Make the character jump      |
 | Attack         | Ctrl / Mouse Click   | X Button             | Perform an attack            |
 | Pause          | Esc                  | Start Button         | Pause the game               |
-
-
-[Markdown Test](test).
-[Markdown Test](gml).
