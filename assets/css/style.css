@@ -39,22 +39,6 @@ canvas {
 }
 
 
-
-/* Base code block style */
-pre.highlight {
-  background: #222222;
-  color: #C0C0C0;
-  padding: 1em;
-  overflow-x: auto;
-  border-radius: 5px;
-  border: 2px solid #039D5B;
-  font-family: monospace;
-}
-
-
-
-
-
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #121212;

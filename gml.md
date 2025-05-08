@@ -85,9 +85,8 @@ var circumference = 2 * PI * 10;
 
 ---
 
-## TypeScript
 
-```typescript
+```gml
 ///@function highlight_test()
 ///@description Demonstrates GML syntax elements
 
