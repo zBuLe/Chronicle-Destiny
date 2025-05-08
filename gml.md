@@ -230,7 +230,7 @@ var circumference = 2 * PI * 10;
 
 ---
 
-```c
+```java
 ///@function vertex_point_add(buff,x,y,z,nx,ny,nz,u,v)
 ///@description Adds a point to a vertex buffer.
 ///@param buffer

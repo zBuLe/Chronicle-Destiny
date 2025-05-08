@@ -1,94 +1,75 @@
-/* === JAVA-GML HIGHLIGHTING ONLY === */
-pre.highlight.language-java {
+/* === JAVA-ONLY CODE BLOCK STYLE === */
+.language-java pre {
   background: #222222;
   color: #C0C0C0;
-  font-family: Consolas, monospace;
-  border: 2px solid #039D5B;
   padding: 1em;
   overflow-x: auto;
-  border-radius: 5px;
+  border-radius: 6px;
+  border: 2px solid #039D5B;
+  font-family: Consolas, monospace;
 }
 
-/* Gutter (line numbers, if enabled by Jekyll plugin) */
-pre.highlight.language-java .lineno {
-  background: #2B343B;
-  color: #C0C0C0;
-  padding-right: 0.75em;
-}
-
-/* Highlighted line (if enabled) */
-pre.highlight.language-java .hll {
-  background-color: #1E7076;
-}
-
-/* === COMMENTS === */
-pre.highlight.language-java .c1 {
+/* === JAVA-ONLY TOKEN COLORS === */
+.language-java .highlight .c1 {
   color: #5B995B;
   font-style: italic;
 } /* Comments */
 
-/* === NUMBERS === */
-pre.highlight.language-java .mi {
+.language-java .highlight .mi {
   color: #FF8080;
   font-weight: bold;
 } /* Integer Numbers */
 
-pre.highlight.language-java .mf {
+.language-java .highlight .mf {
   color: #FF8080;
   font-weight: bold;
 } /* Floating-point Numbers */
 
-pre.highlight.language-java .kc {
+.language-java .highlight .kc {
   color: #FF8080;
   font-weight: bold;
-} /* Keyword Constants */
+} /* Keyword Constants (true, false, null) */
 
-/* === STRINGS === */
-pre.highlight.language-java .s {
+.language-java .highlight .s {
   color: #FFFF00;
   font-weight: bold;
 } /* Strings */
 
-pre.highlight.language-java .s2 {
+.language-java .highlight .s2 {
   color: #FFFF00;
   font-weight: bold;
 } /* Secondary Strings */
 
-/* === KEYWORDS === */
-pre.highlight.language-java .k {
+.language-java .highlight .k {
   color: #FFB871;
   font-weight: bold;
 } /* General Keywords */
 
-pre.highlight.language-java .kt {
+.language-java .highlight .kt {
   color: #FFB871;
   font-weight: bold;
 } /* Type Keywords */
 
-/* === VARIABLES === */
-pre.highlight.language-java .n {
+.language-java .highlight .n {
   color: #FFF899;
 } /* Static Variables */
 
-pre.highlight.language-java .na {
+.language-java .highlight .na {
   color: #B2B1FF;
 } /* Instance Variables */
 
-/* === OPERATORS / PUNCTUATION === */
-pre.highlight.language-java .o {
+.language-java .highlight .o {
   color: #FFB871;
 } /* Operators */
 
-/* === CONSTANTS / FUNCTIONS === */
-pre.highlight.language-java .no {
+.language-java .highlight .no {
   color: #FF8080;
 } /* Constants */
 
-pre.highlight.language-java .nf {
+.language-java .highlight .nf {
   color: #FF8080;
 } /* Function Names */
 
-/* === MACRO / ERROR === */
-pre.highlight.language-java .err {
+.language-java .highlight .err {
   color: #FF8080;
 } /* Error / Macro */
