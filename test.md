@@ -61,6 +61,9 @@ function helloWorld() {
 
 ### GameMaker Language
 
+<pre> ```gml if (player.hp <= 0) { instance_destroy(); } ``` </pre>
+
+
 ```gml
 /// @function                is_same_object(inst_id, object_id)
 /// @description             Check if the given instance belongs to the given object.
