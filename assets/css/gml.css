@@ -73,3 +73,52 @@
 .language-java .highlight .err {
   color: #FF8080;
 } /* Error / Macro */
+
+
+
+
+/* Override base styles */
+.hljs {
+  background: #222222;
+  color: #C0C0C0;
+  font-family: Consolas, monospace;
+  border: 2px solid #039D5B;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+/* Highlight.js token classes */
+.hljs-keyword,
+.hljs-built_in,
+.hljs-type {
+  color: #FFB871;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-literal {
+  color: #FF8080;
+  font-weight: bold;
+}
+
+.hljs-string {
+  color: #FFFF00;
+  font-weight: bold;
+}
+
+.hljs-comment {
+  color: #5B995B;
+  font-style: italic;
+}
+
+.hljs-function .hljs-title {
+  color: #FF8080;
+}
+
+.hljs-variable {
+  color: #FFF899;
+}
+
+.hljs-attr {
+  color: #B2B1FF;
+}
