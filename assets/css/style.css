@@ -40,7 +40,7 @@ canvas {
 
 
 
-/* Base code block style */
+/* GML-inspired code block styling */
 pre.highlight {
   background: #1e1e1e;
   color: #d4d4d4;
@@ -50,27 +50,51 @@ pre.highlight {
   font-family: monospace;
 }
 
-/* Comments (greenish in GML) */
-pre.highlight .c  { color: #6a9955; font-style: italic; }
+/* Comments */
+.highlight .c,
+.highlight .c1 {
+  color: #5B995B;
+  font-style: italic;
+}
 
-/* Keywords (bright blue in GML) */
-pre.highlight .k  { color: #569cd6; }
+/* Keywords */
+.highlight .k,
+.highlight .kd {
+  color: #FFB871;
+  font-weight: bold;
+}
 
-/* Built‐ins/functions (light teal) */
-pre.highlight .nb { color: #4ec9b0; }
+/* Built-in functions */
+.highlight .nb {
+  color: #FFB871;
+}
 
-/* Strings (orange) */
-pre.highlight .s  { color: #ce9178; }
+/* Strings */
+.highlight .s {
+  color: #FFFF00;
+}
 
-/* Numbers (purple) */
-pre.highlight .m  { color: #b5cea8; }
+/* Numbers */
+.highlight .m {
+  color: #FF8080;
+}
 
-/* Operators & punctuation (light gray) */
-pre.highlight .o,
-pre.highlight .p  { color: #d4d4d4; }
+/* Operators */
+.highlight .o {
+  color: #C0C0C0;
+}
 
-/* Type/Class names (if any) */
-pre.highlight .nc { color: #4ec9b0; }
+/* Punctuation */
+.highlight .p {
+  color: #FFB871;
+  font-weight: bold;
+}
+
+/* User-defined names */
+.highlight .nx {
+  color: #d4d4d4;
+}
+
 
 
 
