@@ -12,4 +12,12 @@
 
 ---
 
-* test
+## Basic Controls
+
+| Action         | Key/Button           | Gamepad Button       | Description                  |
+|----------------|----------------------|----------------------|------------------------------|
+| Move Left      | Arrow Left / A       | Left Stick Left      | Move the character left      |
+| Move Right     | Arrow Right / D      | Left Stick Right     | Move the character right     |
+| Jump           | Spacebar / W         | A Button             | Make the character jump      |
+| Attack         | Ctrl / Mouse Click   | X Button             | Perform an attack            |
+| Pause          | Esc                  | Start Button         | Pause the game               |
