@@ -78,6 +78,75 @@ var circumference = 2 * PI * 10;
 
 ```
 
+## JavaScript
+
+```javascript
+///@function highlight_test()
+///@description Demonstrates GML syntax elements
+
+// Variable declarations
+var count = 10;
+var speed = 2.5;
+var isActive = true;
+var name = "GML";
+var color = c_red;
+
+// Arrays and structs
+var data = [1, 2, 3];
+var stats = { hp: 100, mp: 50, alive: true };
+
+// Access and assignment
+player.hp -= 5;
+global.score += 100;
+stats.hp = clamp(stats.hp - 10, 0, 100);
+
+// Control flow
+if (isActive && count > 0) {
+    show_debug_message("Active: " + string(count));
+} else if (!isActive) {
+    instance_destroy();
+} else {
+    count = 0;
+}
+
+// Loop
+for (var i = 0; i < array_length(data); i++) {
+    data[i] *= 2;
+}
+
+// Switch
+switch (count) {
+    case 0: show_message("Zero"); break;
+    case 1: show_message("One"); break;
+    default: show_message("Many");
+}
+
+// Scripted functions
+function do_magic(target, power) {
+    with (target) {
+        hp -= power;
+        if (hp <= 0) instance_destroy();
+    }
+}
+
+// Call function
+do_magic(enemy, 25);
+
+// Enum
+enum STATES { IDLE, MOVE, ATTACK }
+var state = STATES.MOVE;
+
+// Repeat
+repeat(3) {
+    draw_text(x, y, "Looping!");
+}
+
+// Macro (define)
+#define PI 3.14159
+var circumference = 2 * PI * 10;
+
+```
+
 ---
 
 ## csharp
