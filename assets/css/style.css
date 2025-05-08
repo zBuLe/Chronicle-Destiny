@@ -17,3 +17,24 @@ nav a {
   margin-right: 1em;
   text-decoration: none;
 }
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
+}
+
+table {
+  margin: 2em auto;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  text-align: left;
+}
