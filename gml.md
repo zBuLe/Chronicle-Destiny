@@ -11,7 +11,7 @@ This test demonstrates GML-style code syntax using `javascript` highlighting, st
 
 
 
-```javascript
+```c
 ///@function vertex_point_add(buff,x,y,z,nx,ny,nz,u,v)
 ///@description Adds a point to a vertex buffer.
 ///@param buffer
@@ -31,6 +31,8 @@ function vertex_point_add(argument0, argument1, argument2, argument3, argument4,
 	var nx=argument4;
 	var ny=argument5;
 	var nz=argument6;
+
+  var lan="rala"
 
 	var uu=argument7;
 	var vv=argument8;

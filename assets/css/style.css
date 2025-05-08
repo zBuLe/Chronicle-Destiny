@@ -40,60 +40,37 @@ canvas {
 
 
 
-/* GML-inspired code block styling */
+/* Base code block style */
 pre.highlight {
-  background: #1e1e1e;
-  color: #d4d4d4;
+  background: #222222;
+  color: #C0C0C0;
   padding: 1em;
   overflow-x: auto;
-  border-radius: 4px;
+  border-radius: 5px;
+  border: 2px solid #039D5B;
   font-family: monospace;
 }
 
-/* Comments */
-.highlight .c,
-.highlight .c1 {
-  color: #5B995B;
-  font-style: italic;
-}
-
-/* Keywords */
-.highlight .k,
-.highlight .kd {
-  color: #FFB871;
-  font-weight: bold;
-}
-
-/* Built-in functions */
-.highlight .nb {
-  color: #FFB871;
-}
-
-/* Strings */
-.highlight .s {
-  color: #FFFF00;
-}
-
-/* Numbers */
-.highlight .m {
-  color: #FF8080;
-}
-
-/* Operators */
-.highlight .o {
+/* Inline code (optional) */
+code {
+  background: #222222;
   color: #C0C0C0;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
 }
 
-/* Punctuation */
-.highlight .p {
-  color: #FFB871;
-  font-weight: bold;
-}
+/* GML token colors */
+.highlight .c,
+.highlight .c1 { color: #5B995B; font-style: italic; }       /* Comments */
+.highlight .k,
+.highlight .kd { color: #FFB871; font-weight: bold; }         /* Keywords */
+.highlight .nb      { color: #FFB871; }                       /* Built-in functions */
+.highlight .s       { color: #FFFF00; }                       /* Strings */
+.highlight .m       { color: #FF8080; }                       /* Numbers */
+.highlight .o       { color: #C0C0C0; }                       /* Operators */
+.highlight .p       { color: #FFB871; font-weight: bold; }    /* Punctuation */
+.highlight .nx      { color: #C0C0C0; }                       /* User-defined names */
 
-/* User-defined names */
-.highlight .nx {
-  color: #d4d4d4;
-}
 
 
 
