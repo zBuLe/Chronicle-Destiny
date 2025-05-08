@@ -1,60 +1,80 @@
-/* Base code block styling */
+/* === BASE === */
 pre.highlight {
-  background: #222222;
-  color: #ffffff;
+  background: #555;
+  color: white;
   padding: 1em;
   overflow-x: auto;
-  border-radius: 5px;
-  border: 2px solid #039D5B;
+  border-radius: 6px;
+  border: 4px solid cyan;
   font-family: monospace;
 }
 
-/* Inline code, just in case */
-code {
-  background: #222222;
-  color: #ffffff;
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-}
 
-/* Token test colors */
 
-/* Comments */
-.highlight .c  { color: #5B995B; }     /* Single-line comment */
-.highlight .c1 { color: #77DD77; }     /* Documentation comment */
+/* === KEYWORDS === */
+.highlight .k       { color: magenta ; }         /* keyword */
+.highlight .kd      { color: orange ; }          /* keyword declaration */
+.highlight .kn      { color: deepskyblue ; }     /* keyword namespace */
+.highlight .kt      { color: limegreen ; }       /* type */
+.highlight .kc      { color: mediumorchid ; }    /* keyword constant */
+.highlight .kr      { color: indigo ; }          /* keyword reserved */
+.highlight .nb      { color: mediumslateblue ; } /* built-in name */
 
-/* Keywords */
-.highlight .k  { color: #FFB871; font-weight: bold; }  /* general keyword */
-.highlight .kd { color: #FF00FF; font-weight: bold; }  /* declaration (e.g., 'function') */
 
-/* Built-in */
-.highlight .nb { color: #00FFFF; }     /* Built-in functions like 'instance_create' */
+/* === NAMES === */
+.highlight .n       { color: darkkhaki ; }       /* general name */
+.highlight .na      { color: mediumblue ; }      /* attribute name */
+.highlight .nc      { color: mediumspringgreen ; } /* class name */
+.highlight .nd      { color: blueviolet ; }      /* decorator */
+.highlight .nf      { color: coral ; }           /* function name */
+.highlight .nl      { color: gold ; }            /* label */
+.highlight .nx      { color: darkturquoise ; }   /* name reference */
+.highlight .no      { color: darkcyan ; }        /* constant name */
 
-/* Strings */
-.highlight .s  { color: #FFFF00; }     /* String literals */
+/* === VARIABLES === */
+.highlight .nv      { color: tomato ; }          /* variable */
+.highlight .vc      { color: peru ; }            /* class variable */
+.highlight .vg      { color: slateblue ; }       /* global variable */
+.highlight .vi      { color: crimson ; }         /* instance variable */
+.highlight .bp      { color: mediumseagreen ; }  /* pseudo-variable (like this/self) */
 
-/* Numbers */
-.highlight .m  { color: #FF8080; }     /* Numeric literals */
+/* === STRINGS / NUMBERS === */
+.highlight .s       { color: yellow ; }          /* string */
+.highlight .s1      { color: yellowgreen ; }
+.highlight .s2      { color: peachpuff ; }
+.highlight .dl      { color: mediumturquoise ; } /* delimiter */
 
-/* Operators */
-.highlight .o  { color: #00FF00; }     /* + - * / = == && || */
+.highlight .m       { color: orangered ; }       /* number */
+.highlight .mi      { color: firebrick ; }       /* integer */
+.highlight .mf      { color: darkorange ; }      /* float */
 
-/* Punctuation */
-.highlight .p  { color: #FFA500; font-weight: bold; }  /* , ; ( ) { } */
+/* === COMMENTS === */
+.highlight .c       { color: greenyellow ; font-style: italic; } /* comment */
+.highlight .c1      { color: lawngreen ; font-style: italic; }
+.highlight .cm      { color: springgreen ; font-style: italic; }
 
-/* Variables / Names */
-.highlight .n  { color: #FFFFFF; }     /* general names */
-.highlight .nx { color: #ADD8E6; }     /* user-defined variable names or references */
-.highlight .nf { color: #00FFAA; }     /* function name (usually in definitions) */
-.highlight .na { color: #B0E0E6; }     /* attribute (in structs or access) */
+/* === OPERATORS / PUNCTUATION === */
+.highlight .o       { color: chartreuse ; }      /* operator */
+.highlight .p       { color: hotpink ; font-weight: bold; } /* punctuation */
+.highlight .mp      { color: turquoise ; }       /* punctuation (e.g., dot) */
 
-/* Types and Constants */
-.highlight .kt { color: #BA55D3; }     /* type keywords */
-.highlight .no { color: #F08080; }     /* constants like 'c_white' */
+/* === PREPROCESSOR / SPECIAL === */
+.highlight .cp      { color: mediumvioletred ; } /* preprocessor directive */
 
-/* Literal true/false/null */
-.highlight .kc { color: #FF1493; font-weight: bold; }  /* true, false, null */
+/* === EMPHASIS / ERROR === */
+.highlight .ge      { font-style: italic; }                /* general emphasis */
+.highlight .gs      { font-weight: bold; }                 /* strong emphasis */
+.highlight .err     { background: red ; color: white ; font-weight: bold; }
 
-/* Enums, tags */
-.highlight .nn { color: #FFD700; }     /* Namespace or enum object */
-.highlight .nt { color: #20B2AA; }     /* Tag name (e.g., in HTML, not often GML) */
+/* === DIFF === */
+.highlight .gd      { background: maroon ; color: red ; }   /* deletion */
+.highlight .gi      { background: darkgreen ; color: lime ; } /* insertion */
+
+
+
+.highlight .c1 { color: #5B995B; font-style: italic; background: #222;}       /* Comments */
+.highlight .kd { color: #FFB871; font-weight: bold; background: #222; text-decoration-line: underline;}         /* Keywords */
+.highlight .n { color: #FFB871; background: #400;}         /* Keywords */
+.highlight .kr { color: #FFB871;font-weight: bold; background: #222; text-decoration-line: underline;}         /* Keywords */
+.highlight .k { color: #FFB871;font-weight: bold; background: #008; text-decoration-line: underline;}         /* Keyword controll */
+.highlight .kt { color: #FFB871;font-weight: bold; background: #800;text-decoration-line: underline;}         /* Keyword controll */
