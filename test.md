@@ -49,11 +49,30 @@ This is a paragraph with **bold**, *italic*, ***bold italic***, and `inline code
 
 ## Code Block
 
+### javascript
+
 ```javascript
 function helloWorld() {
   console.log("Hello, world!");
 }
 ````
+
+---
+
+### GameMaker Language
+
+```gml
+/// @function                is_same_object(inst_id, object_id)
+/// @description             Check if the given instance belongs to the given object.
+/// @param {Id.Instance}     inst_id    The unique instance ID value of the instance to check.
+/// @param {Asset.GMObject}  object_id  The object index to be checked against.
+/// @return {Bool}
+
+function is_same_object(_inst_id, _object_id)
+{
+    return _inst_id.object_index == _object_id;
+}
+```
 
 ---
 
