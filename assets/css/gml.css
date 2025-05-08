@@ -1,0 +1,60 @@
+/* Base code block styling */
+pre.highlight {
+  background: #222222;
+  color: #ffffff;
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 5px;
+  border: 2px solid #039D5B;
+  font-family: monospace;
+}
+
+/* Inline code, just in case */
+code {
+  background: #222222;
+  color: #ffffff;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* Token test colors */
+
+/* Comments */
+.highlight .c  { color: #5B995B; }     /* Single-line comment */
+.highlight .c1 { color: #77DD77; }     /* Documentation comment */
+
+/* Keywords */
+.highlight .k  { color: #FFB871; font-weight: bold; }  /* general keyword */
+.highlight .kd { color: #FF00FF; font-weight: bold; }  /* declaration (e.g., 'function') */
+
+/* Built-in */
+.highlight .nb { color: #00FFFF; }     /* Built-in functions like 'instance_create' */
+
+/* Strings */
+.highlight .s  { color: #FFFF00; }     /* String literals */
+
+/* Numbers */
+.highlight .m  { color: #FF8080; }     /* Numeric literals */
+
+/* Operators */
+.highlight .o  { color: #00FF00; }     /* + - * / = == && || */
+
+/* Punctuation */
+.highlight .p  { color: #FFA500; font-weight: bold; }  /* , ; ( ) { } */
+
+/* Variables / Names */
+.highlight .n  { color: #FFFFFF; }     /* general names */
+.highlight .nx { color: #ADD8E6; }     /* user-defined variable names or references */
+.highlight .nf { color: #00FFAA; }     /* function name (usually in definitions) */
+.highlight .na { color: #B0E0E6; }     /* attribute (in structs or access) */
+
+/* Types and Constants */
+.highlight .kt { color: #BA55D3; }     /* type keywords */
+.highlight .no { color: #F08080; }     /* constants like 'c_white' */
+
+/* Literal true/false/null */
+.highlight .kc { color: #FF1493; font-weight: bold; }  /* true, false, null */
+
+/* Enums, tags */
+.highlight .nn { color: #FFD700; }     /* Namespace or enum object */
+.highlight .nt { color: #20B2AA; }     /* Tag name (e.g., in HTML, not often GML) */
