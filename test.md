@@ -59,9 +59,24 @@ function helloWorld() {
 
 ---
 
+```js
 ### GameMaker Language
 
-<<pre> ```gml /// @function is_same_object(inst_id, object_id) /// @description Check if the given instance belongs to the given object. /// @param {Id.Instance} inst_id The unique instance ID value of the instance to check. /// @param {Asset.GMObject} object_id The object index to be checked against. /// @return {Bool} function is_same_object(_inst_id, _object_id) { var inst_id = _inst_id; var object_id = _object_id return inst_id.object_index == _object_id; } ``` </pre>
+/// @function                is_same_object(inst_id, object_id)
+/// @description             Check if the given instance belongs to the given object.
+/// @param {Id.Instance}     inst_id    The unique instance ID value of the instance to check.
+/// @param {Asset.GMObject}  object_id  The object index to be checked against.
+/// @return {Bool}
+
+function is_same_object(_inst_id, _object_id)
+{
+    var inst_id = _inst_id; 
+    var object_id = _object_id
+    return inst_id.object_index == _object_id;
+}
+```
+
+<pre> ```gml /// @function is_same_object(inst_id, object_id) /// @description Check if the given instance belongs to the given object. /// @param {Id.Instance} inst_id The unique instance ID value of the instance to check. /// @param {Asset.GMObject} object_id The object index to be checked against. /// @return {Bool} function is_same_object(_inst_id, _object_id) { var inst_id = _inst_id; var object_id = _object_id return inst_id.object_index == _object_id; } ``` </pre>
 
 
 ```gml
