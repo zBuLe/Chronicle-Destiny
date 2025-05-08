@@ -1,44 +1,19 @@
 body {
-  background-color: #121212; /* Dark background */
-  color: #e0e0e0; /* Light text for contrast */
-}
-
-a {
-  color: #6495ED; /* Cornflower blue for links */
-}
-
-a:hover {
-  color: #87aefc; /* Slightly lighter blue on hover */
-}
-
-button {
-  background-color: #6495ED; /* Cornflower blue for buttons */
-  color: #ffffff; /* White text */
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #87aefc; /* Slightly lighter blue on hover */
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fefefe;
+  color: #333;
 }
 
 header, footer {
-  background-color: #1e1e1e; /* Slightly lighter dark background */
-  color: #e0e0e0;
-  padding: 10px 20px;
+  background: #004080;
+  color: white;
+  padding: 1em;
 }
 
-input, textarea {
-  background-color: #1e1e1e; /* Dark input fields */
-  color: #e0e0e0;
-  border: 1px solid #6495ED; /* Cornflower blue border */
-  padding: 5px;
-  border-radius: 3px;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: #87aefc; /* Slightly lighter blue on focus */
+nav a {
+  color: white;
+  margin-right: 1em;
+  text-decoration: none;
 }
