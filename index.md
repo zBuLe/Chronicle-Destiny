@@ -24,3 +24,4 @@ title: Chronicle Destiny
 
 
 [Markdown Test](test).
+[Markdown Test](gml).
