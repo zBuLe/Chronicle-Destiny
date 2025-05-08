@@ -39,6 +39,28 @@ canvas {
 }
 
 
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.social-links a {
+  color: #039D5B;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #FFB871;
+}
+
+
+
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #121212;
