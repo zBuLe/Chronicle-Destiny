@@ -37,3 +37,31 @@ canvas {
   height: auto;
   border: 1px solid #ccc;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
+  a {
+    color: #90caf9;
+  }
+
+  header, footer {
+    background: #1e1e1e;
+    color: #fff;
+  }
+
+  table {
+    border-color: #444;
+  }
+
+  th, td {
+    border: 1px solid #444;
+  }
+
+  canvas {
+    border-color: #444;
+  }
+}
