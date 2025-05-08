@@ -40,26 +40,37 @@ canvas {
 
 
 
-pre {
+/* Base code block style */
+pre.highlight {
   background: #1e1e1e;
-  color: #e0e0e0;
+  color: #d4d4d4;
   padding: 1em;
   overflow-x: auto;
-  border-radius: 5px;
+  border-radius: 4px;
   font-family: monospace;
 }
 
-code {
-  font-family: monospace;
-}
+/* Comments (greenish in GML) */
+pre.highlight .c  { color: #6a9955; font-style: italic; }
 
-/* Rouge token example styles */
-.highlight .k { color: #c792ea; } /* keyword */
-.highlight .s { color: #ecc48d; } /* string */
-.highlight .c { color: #616161; font-style: italic; } /* comment */
-.highlight .o { color: #f78c6c; } /* operator */
-.highlight .p { color: #89ddff; } /* punctuation */
+/* Keywords (bright blue in GML) */
+pre.highlight .k  { color: #569cd6; }
 
+/* Built‐ins/functions (light teal) */
+pre.highlight .nb { color: #4ec9b0; }
+
+/* Strings (orange) */
+pre.highlight .s  { color: #ce9178; }
+
+/* Numbers (purple) */
+pre.highlight .m  { color: #b5cea8; }
+
+/* Operators & punctuation (light gray) */
+pre.highlight .o,
+pre.highlight .p  { color: #d4d4d4; }
+
+/* Type/Class names (if any) */
+pre.highlight .nc { color: #4ec9b0; }
 
 
 
