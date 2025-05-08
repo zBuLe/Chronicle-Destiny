@@ -23,4 +23,4 @@ title: Chronicle Destiny
 | Pause          | Esc                  | Start Button         | Pause the game               |
 
 
-[Markdown Test](/test).
+[Markdown Test](test).
