@@ -14,14 +14,12 @@ title: Chronicle Destiny
 
 ## Basic Controls
 
-| Action         | Key/Button           | Gamepad Button       | Description                  |
-|----------------|----------------------|----------------------|------------------------------|
-| Move Left      | Arrow Left / A       | Left Stick Left      | Move the character left      |
-| Move Right     | Arrow Right / D      | Left Stick Right     | Move the character right     |
-| Jump           | Spacebar / W         | A Button             | Make the character jump      |
-| Attack         | Ctrl / Mouse Click   | X Button             | Perform an attack            |
-| Pause          | Esc                  | Start Button         | Pause the game               |
+| Action         | Key/Button          | Gamepad Button       | Description                  |
+|----------------|---------------------|----------------------|------------------------------|
+| Movement       | W/A/S/D             | Left Stick           | Move the character           |
+| Dialog         | J                   | Y Button             | Interact with dialog         |
+| Action         | K                   | A Button             | Perform an action            |
+| Rotate/Select  | Q / E               | Bumper Buttons       | Rotate or select an option   |
 
-
-[Game Design Document](gdd/chronicle-destiny-gdd.md)
+📜 [Game Design Document](gdd/chronicle-destiny-gdd.md)
 
