@@ -98,14 +98,16 @@ canvas {
 
 
 
-/* Remove default list styles */
 .nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  background-color: #222; /* nav background */
+  justify-content: center; /* center nav items */
+  background-color: #222;
+  width: 100%; /* full width bar */
 }
+
 
 /* Style each nav item */
 .nav-list li {
