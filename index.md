@@ -2,6 +2,8 @@
 title: Chronicle Destiny
 ---
 
+---
+
 <div class="gm4html5_div_class" id="gm4html5_div_id">
   <canvas id="canvas" width="640" height="360" >
     <p>Your browser doesn't support HTML5 canvas.</p>
@@ -24,6 +26,5 @@ title: Chronicle Destiny
 
 * [📜 Game Design Document]({{ '/gdd/chronicle-destiny-gdd.md' | relative_url }})
 * [🛠️ Devlog]({{ '/devlog/' | relative_url }})
-* [🎥 Media]({{ '/media/' | relative_url }})
 * [📝 Change Log]({{ '/changelog.md' | relative_url }})
 {: .nav-list }
