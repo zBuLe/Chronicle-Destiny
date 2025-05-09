@@ -22,8 +22,8 @@ title: Chronicle Destiny
 | Rotate/Select  | Q / E               | Bumper Buttons       | Rotate or select an option   |
 
 
-* 📜[Game Design Document]({{ '/gdd/chronicle-destiny-gdd.md' | relative_url }})
-* 🛠️ [Devlog]({{ '/devlog/' | relative_url }})
-* 🎥 [Media]({{ '/media/' | relative_url }})
-* 📝 [Change Log]({{ '/changelog.md' | relative_url }})
+* [📜 Game Design Document]({{ '/gdd/chronicle-destiny-gdd.md' | relative_url }})
+* [🛠️ Devlog]({{ '/devlog/' | relative_url }})
+* [🎥 Media]({{ '/media/' | relative_url }})
+* [📝 Change Log]({{ '/changelog.md' | relative_url }})
 {: .nav-list }

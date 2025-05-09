@@ -126,7 +126,7 @@ canvas {
 /* Hover and active states */
 .nav-list li a:hover,
 .nav-list li a:focus {
-  background-color: #039D5B; /* change background on hover */
+  background-color: #6495ED; /* change background on hover */
   color: white;              /* change text color on hover */
 }
 
