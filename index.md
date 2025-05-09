@@ -9,7 +9,7 @@ title: Chronicle Destiny
     <p>Your browser doesn't support HTML5 canvas.</p>
    </canvas>
 </div>
-<script type="text/javascript" src="html5game/Chronicle-Destiny.js?cachebust=1524384015"></script>
+<script type="text/javascript" src="html5game/Chronicle-Destiny.js?cachebust=918507098"></script>
 <script>window.onload = GameMaker_Init;</script>
 
 ---
