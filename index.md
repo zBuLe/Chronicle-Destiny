@@ -2,6 +2,11 @@
 title: Chronicle Destiny
 ---
 
+* [📜 Game Design Document](/gdd/chronicle-destiny-gdd)
+* [🛠️ Devlog](devlog)
+* [📝 Change Log](changelog)
+{: .nav-list }
+
 ---
 
 <div class="gm4html5_div_class" id="gm4html5_div_id">
@@ -24,7 +29,3 @@ title: Chronicle Destiny
 | Rotate/Select  | Q / E               | Bumper Buttons       | Rotate or select an option   |
 
 
-* [📜 Game Design Document](/gdd/chronicle-destiny-gdd)
-* [🛠️ Devlog](devlog)
-* [📝 Change Log](changelog)
-{: .nav-list }
