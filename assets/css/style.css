@@ -20,17 +20,24 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  --primary-color: #6495ED;
 }
 
+/* Reset media elements */
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
 
+/* Form element reset */
 input, button, textarea, select {
   font: inherit;
 }
 
+/* Text wrapping */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
@@ -38,6 +45,7 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
+
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
@@ -47,25 +55,110 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* === GLOBAL STYLES === */
+/* === LAYOUT === */
 
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: #fdfdfd;
-  color: #333;
-  --primary-color: #6495ED; /* Shared color for links and icons */
-}
-
-/* This centers the whole site content */
 .container {
   max-width: 800px;
   margin: 0 auto;
+  padding: 1em;
 }
 
-/* Optional: make tables look nice */
+
+/* === GLOBAL ELEMENTS === */
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4169E1;
+}
+
+
+/* === HEADER === */
+
+.site-header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.site-title {
+  font-size: 2em;
+  font-family: Consolas, monospace;
+  color: var(--primary-color);
+  margin: 0.5em 0;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  font-family: Consolas, monospace;
+}
+
+.site-nav a {
+  color: #C0C0C0;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: var(--primary-color);
+}
+
+
+/* === NAVIGATION BAR === */
+
+.nav-list {
+  list-style: none;
+  margin: 2em auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list li a {
+  display: block;
+  padding: 1em;
+  color: #C0C0C0;
+  font-family: Consolas, monospace;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-list li a:hover,
+.nav-list li a:focus {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.nav-list li:not(:last-child) a {
+  border-right: 1px solid #444;
+}
+
+@media (max-width: 600px) {
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .nav-list li:not(:last-child) a {
+    border-right: none;
+    border-bottom: 1px solid #444;
+  }
+}
+
+
+/* === TABLES === */
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -78,7 +171,9 @@ th, td {
   text-align: left;
 }
 
-/* Optional: center the canvas and game wrapper */
+
+/* === GAME CANVAS === */
+
 .gm4html5_div_class {
   display: flex;
   justify-content: center;
@@ -92,60 +187,7 @@ canvas {
 }
 
 
-
-
-
-
-
-
-.nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center; /* center nav items */
-  background-color: #222;
-  width: 100%; /* full width bar */
-}
-
-
-/* Style each nav item */
-.nav-list li {
-  margin: 0;
-  padding: 0;
-}
-
-/* Style the links */
-.nav-list li a {
-  display: block;
-  padding: 1em;
-  color: #C0C0C0;   /* nav link text color */
-  text-decoration: none;
-  font-family: Consolas, monospace;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-/* Hover and active states */
-.nav-list li a:hover,
-.nav-list li a:focus {
-  background-color: #6495ED; /* change background on hover */
-  color: white;              /* change text color on hover */
-}
-
-/* Optional: Add a border or divider between nav items */
-.nav-list li:not(:last-child) a {
-  border-right: 1px solid #444;
-}
-
-
-
-
-
-
-
-
-
-
+/* === SOCIAL ICONS === */
 
 .social-links {
   display: flex;
@@ -157,22 +199,21 @@ canvas {
 .social-links a {
   display: inline-block;
   font-size: 1.5em;
-  color: #6495ED;
-  text-decoration: none;
-  vertical-align: middle;
+  color: var(--primary-color);
   transition: color 0.3s ease;
+  vertical-align: middle;
 }
 
 .social-links a:hover {
   color: aliceblue;
 }
 
-/* Ensure custom SVGs behave like FA icons */
+/* Optional: support for SVG icons */
 .social-links .social-icon svg {
   display: block;
   width: 100%;
   height: 100%;
-  fill: #6495ED;
+  fill: var(--primary-color);
   transition: fill 0.3s ease;
 }
 
@@ -181,7 +222,25 @@ canvas {
 }
 
 
+/* === FOOTER === */
 
+.site-footer {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: #111;
+  color: #888;
+  margin-top: 3em;
+  border-top: 1px solid #444;
+}
+
+.footer-copy {
+  margin-top: 1em;
+  font-size: 0.9em;
+  color: #666;
+}
+
+
+/* === DARK MODE === */
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -203,5 +262,20 @@ canvas {
 
   canvas {
     border-color: #444;
+  }
+
+  .nav-list {
+    background-color: #1a1a1a;
+  }
+
+  .nav-list li a:hover,
+  .nav-list li a:focus {
+    background-color: #6495ED;
+    color: #fff;
+  }
+
+  .site-footer {
+    background-color: #000;
+    color: #bbb;
   }
 }
