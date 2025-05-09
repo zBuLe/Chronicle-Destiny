@@ -187,6 +187,15 @@ canvas {
 }
 
 
+/* Style for markdown task list checkboxes */
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 0.5em;
+}
+
+
+
+
 /* === SOCIAL ICONS === */
 
 .social-links {
