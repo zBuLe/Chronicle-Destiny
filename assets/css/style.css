@@ -98,6 +98,51 @@ canvas {
 
 
 
+/* Remove default list styles */
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #222; /* nav background */
+}
+
+/* Style each nav item */
+.nav-list li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the links */
+.nav-list li a {
+  display: block;
+  padding: 1em;
+  color: #C0C0C0;   /* nav link text color */
+  text-decoration: none;
+  font-family: Consolas, monospace;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover and active states */
+.nav-list li a:hover,
+.nav-list li a:focus {
+  background-color: #039D5B; /* change background on hover */
+  color: white;              /* change text color on hover */
+}
+
+/* Optional: Add a border or divider between nav items */
+.nav-list li:not(:last-child) a {
+  border-right: 1px solid #444;
+}
+
+
+
+
+
+
+
+
+
 
 
 .social-links {
