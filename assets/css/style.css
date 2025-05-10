@@ -5,46 +5,44 @@
 /* === GLOBAL DESIGN TOKENS === */
 :root {
   --font-family: Consolas, monospace;
---font-monospace: Consolas, monospace;
+  --font-monospace: Consolas, monospace;
 
+  /* Accents (common) */
+  --accent1: cornflowerblue;    /* primary blue */
+  --accent2: aliceblue;         /* soft hover blue */
+  --accent3: azure;             /* extra accent */
 
+  /* Light mode */
+  --bg-light: #ddd;
+  --bg2-light: #ccc;
+  --text-light: #333;
+  --text2-light: #777;
+  --line-light: #ccc;
 
-/* Accents (common) */
---accent1: cornflowerblue;    /* primary blue */
---accent2: aliceblue;  /* soft hover blue */
---accent3: azure;  /* soft hover blue */
-
-/* Light mode */
---bg-light: #ddd;
---bg2-light: #ccc;
---text-light: #333;
---text2-light: #777;
---line-light: #ccc;
-
-/* Dark mode */
---bg-dark: #222;
---bg2-dark: #191919;
---text-dark: #ddd;
---text2-dark: #aaa;
---line-dark: #444;
+  /* Dark mode */
+  --bg-dark: #222;
+  --bg2-dark: #191919;
+  --text-dark: #ddd;
+  --text2-dark: #aaa;
+  --line-dark: #444;
 }
 
 /* === RESET === */
 *, *::before, *::after {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 * {
-margin: 0;
+  margin: 0;
 }
 @media (prefers-reduced-motion: no-preference) {
-html { interpolate-size: allow-keywords; }
+  html { interpolate-size: allow-keywords; }
 }
 img, picture, video, canvas, svg {
-display: block;
-max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 input, button, textarea, select {
-font: inherit;
+  font: inherit;
 }
 p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 p { text-wrap: pretty; }
@@ -53,166 +51,190 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
 
 /* === BASE === */
 body {
-font-family: var(--font-family);
-background-color: var(--bg-light);
-color: var(--text-light);
-line-height: 1.5;
--webkit-font-smoothing: antialiased;
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 a {
-color: var(--accent1);
-text-decoration: none;
-transition: color 0.3s ease;
+  color: var(--accent1);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 a:hover {
-color: var(--accent3);
+  color: var(--accent3);
 }
 
 /* === LAYOUT === */
 .container {
-max-width: 800px;
-margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+/* === HEADINGS === */
 h1 {
   border-bottom: 2px solid var(--line-light);
   padding-bottom: 0.3em;
   margin-bottom: 0.5em;
 }
 
-hr {
-  border: none;
-  border-top: 2px solid var(--line-light);
-  margin: 2em 0;
-}
-
-
 /* === HEADER === */
 .site-header {
-text-align: center;
-background-color: var(--bg2-light);
+  text-align: center;
+  background-color: var(--bg2-light);
 }
-
-.site-header h1{
-  border-bottom: 0px;
+.site-header h1 {
+  border-bottom: 0;
   padding-bottom: 0;
   margin-bottom: 0;
 }
-
 .site-title {
-font-size: 2em;
-font-family: var(--font-family);
-color: var(--accent1);
+  font-size: 2em;
+  font-family: var(--font-family);
+  color: var(--accent1);
 }
 .site-nav {
-display: flex;
-justify-content: center;
-gap: 1.5em;
-font-family: Consolas, monospace;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  font-family: var(--font-monospace);
 }
 .site-nav a {
-color: var(--accent1);
-transition: color 0.3s ease;
+  color: var(--accent1);
+  transition: color 0.3s ease;
 }
 .site-nav a:hover {
-color: var(--accent3);
+  color: var(--accent3);
 }
-
-
 
 /* === TABLES === */
 table {
-border-collapse: collapse;
-width: 100%;
-margin: 2em 0;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2em 0;
 }
 th, td {
-border: 1px solid var(--line-light);
-padding: 0.5em;
-text-align: left;
+  border: 1px solid var(--line-light);
+  padding: 0.5em;
+  text-align: left;
 }
 
 /* === CANVAS === */
 .gm4html5_div_class {
-display: flex;
-justify-content: center;
-margin: 2em 0;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
 }
 canvas {
-max-width: 100%;
-height: auto;
-border: 1px solid var(--line-light);
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line-light);
 }
 
 /* === SOCIAL ICONS === */
 .social-links {
-display: flex;
-justify-content: center;
-gap: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }
 .social-links a {
-display: inline-block;
-font-size: 1.5em;
-color: var(--accent1);
-transition: color 0.3s ease;
-vertical-align: middle;
+  display: inline-block;
+  font-size: 1.5em;
+  color: var(--accent1);
+  transition: color 0.3s ease;
+  vertical-align: middle;
 }
 .social-links a:hover {
-color: var(--accent2);
+  color: var(--accent2);
 }
 
 /* === FOOTER === */
 .site-footer {
-text-align: center;
-padding: 1em 1em;
-background-color: var(--bg2-light);
-color: var(--text2-light);
-border-top: 1px solid var(--line-light);
+  text-align: center;
+  padding: 1em 1em;
+  background-color: var(--bg2-light);
+  color: var(--text2-light);
+  border-top: 1px solid var(--line-light);
 }
 .footer-copy {
-margin-top: 1em;
-font-size: 0.9em;
-color: var(--text2-light);
+  margin-top: 1em;
+  font-size: 0.9em;
+  color: var(--text2-light);
+}
+
+/* === CHECKLIST / TASK LIST STYLES === */
+.task-list {
+  list-style: none;
+}
+.task-list-item {
+  position: relative;
+  padding-left: 2em;
+  margin: 0.5em 0;
+}
+.task-list-item input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  transform: scale(1.2);
+}
+.task-list-item input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: var(--text2-light);
+}
+
+/* === BLOCKQUOTE STYLES === */
+blockquote {
+  background-color: var(--bg2-light);
+  padding: 1em;
+  margin: 1.5em 0;
+  border-left: 4px solid var(--accent1);
+  color: var(--text-light);
 }
 
 /* === DARK MODE OVERRIDES === */
 @media (prefers-color-scheme: dark) {
-body {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
-}
-h1 {
-  border-bottom: 2px solid var(--line-dark);
-}
-hr {
-  border-top: 2px solid var(--line-dark);
-}
-.site-header, .site-footer {
-  background-color: var(--bg2-dark);
-}
-.site-nav a {
-  color: var(--accent1);
-}
-.site-nav a:hover {
-  color: var(--accent2);
-}
-table, th, td {
-  border-color: var(--line-dark);
-}
-canvas {
-  border-color: var(--line-dark);
-}
-.social-links a {
-  color: var(--accent1);
-}
-.social-links a:hover {
-  color: var(--accent2);
-}
-.site-footer {
-  color: var(--text2-dark);
-  border-top: 1px solid var(--line-dark);
-}
-.footer-copy {
-  color: var(--text2-dark);
-}
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  h1 {
+    border-bottom: 2px solid var(--line-dark);
+  }
+  .site-header, .site-footer {
+    background-color: var(--bg2-dark);
+  }
+  .site-nav a {
+    color: var(--accent1);
+  }
+  .site-nav a:hover {
+    color: var(--accent2);
+  }
+  table, th, td {
+    border-color: var(--line-dark);
+  }
+  canvas {
+    border-color: var(--line-dark);
+  }
+  .social-links a {
+    color: var(--accent1);
+  }
+  .social-links a:hover {
+    color: var(--accent2);
+  }
+  .site-footer {
+    color: var(--text2-dark);
+    border-top: 1px solid var(--line-dark);
+  }
+  .footer-copy {
+    color: var(--text2-dark);
+  }
+  blockquote {
+    background-color: var(--bg2-dark);
+    border-left: 4px solid var(--accent1);
+    color: var(--text-dark);
+  }
+  .task-list-item input[type="checkbox"]:checked + span {
+    color: var(--text2-dark);
+  }
 }

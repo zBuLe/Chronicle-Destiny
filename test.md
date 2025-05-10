@@ -9,6 +9,12 @@ layout: default
 
 ### H3 Section
 
+#### H4 Subsection
+
+##### H5 Sub-subsection
+
+###### H6 Sub-sub-subsection
+
 ---
 
 This is a normal paragraph to test body text rendering.
@@ -46,6 +52,13 @@ Here is a [link to example.com](https://example.com).
 > This is a blockquote example.  
 > It should be styled clearly from normal text.
 
+> #### The quarterly results look great!
+>
+> - Revenue was off the chart.
+> - Profits were higher than ever.
+>
+>  *Everything* is going according to **plan**.
+
 ## Code Block
 
 ```java
@@ -66,19 +79,4 @@ if (keyboard_check(vk_left)) {
 
 ---
 
-## ✅ Usage:
-Save this as `test.md` in your site root or `/pages/` folder.  
-Link to it from your site temporarily:  
 
-```markdown
-* [🎨 Style Test]({{ '/test.md' | relative_url }})
-````
-
-Visit `chronicle.zbule.xyz/test` → you will see everything rendered in one place 👍
-
----
-
-If you want, I can also offer a **matching suggestion for custom checklist CSS**
-(to make `[x]` and `[ ]` checkboxes look bigger + aligned).
-
-👉 Just say **“yes, give me checklist css too.”**
