@@ -2,7 +2,7 @@
 title: Chronicle Destiny
 ---
 
-# Alpha
+# 🧪 Alpha
 
 ---
 

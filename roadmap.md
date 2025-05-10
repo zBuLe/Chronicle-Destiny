@@ -4,6 +4,8 @@ title: Roadmap
 
 # 🗺️ Roadmap
 
+---
+
 > Updated: May 2025
 
 ## ✅ Completed
