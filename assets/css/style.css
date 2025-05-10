@@ -7,10 +7,10 @@
   --font-family: Consolas, monospace;
   --font-monospace: Consolas, monospace;
 
-  /* Accents (common) */
-  --accent1: cornflowerblue;    /* primary blue */
-  --accent2: aliceblue;         /* soft hover blue */
-  --accent3: azure;             /* extra accent */
+  /* Accents */
+  --accent1: cornflowerblue;
+  --accent2: aliceblue;
+  --accent3: azure;
 
   /* Light mode */
   --bg-light: #ddd;
@@ -65,18 +65,47 @@ a {
 a:hover {
   color: var(--accent3);
 }
-
-/* === LAYOUT === */
 .container {
   max-width: 800px;
   margin: 0 auto;
 }
 
 /* === HEADINGS === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-monospace);
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--text-light);
+}
 h1 {
-  border-bottom: 2px solid var(--line-light);
+  font-size: 2em;
+  border-bottom: 2px solid var(--accent1);
   padding-bottom: 0.3em;
-  margin-bottom: 0.5em;
+  margin: 1em 0 0.5em;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 1.5em 0 0.5em;
+}
+h3 {
+  font-size: 1.25em;
+  margin: 1.2em 0 0.5em;
+}
+h4 {
+  font-size: 1.1em;
+  margin: 1em 0 0.5em;
+}
+h5 {
+  font-size: 1em;
+  margin: 1em 0 0.5em;
+  font-weight: normal;
+  color: var(--text2-light);
+}
+h6 {
+  font-size: 0.9em;
+  margin: 1em 0 0.5em;
+  font-weight: normal;
+  color: var(--text2-light);
 }
 
 /* === HEADER === */
@@ -91,16 +120,16 @@ h1 {
 }
 .site-title {
   font-size: 2em;
-  font-family: var(--font-family);
+  font-family: var(--font-monospace);
   color: var(--accent1);
 }
 .site-nav {
   display: flex;
   justify-content: center;
   gap: 1.5em;
-  font-family: var(--font-monospace);
 }
 .site-nav a {
+  font-family: var(--font-monospace);
   color: var(--accent1);
   transition: color 0.3s ease;
 }
@@ -113,14 +142,52 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin: 2em 0;
+  border: 1px solid var(--line-light);
 }
 th, td {
   border: 1px solid var(--line-light);
   padding: 0.5em;
   text-align: left;
 }
+th {
+  background-color: var(--bg2-light);
+  color: var(--text-light);
+  font-weight: bold;
+}
+tbody tr:nth-child(even) {
+  background-color: #eee;
+}
 
-/* === CANVAS === */
+/* === CHECKLIST / TASK LISTS === */
+.task-list {
+  list-style: none;
+}
+.task-list-item {
+  position: relative;
+  padding-left: 2em;
+  margin: 0.5em 0;
+}
+.task-list-item input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  transform: scale(1.2);
+}
+.task-list-item input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: var(--text2-light);
+}
+
+/* === BLOCKQUOTES === */
+blockquote {
+  background-color: var(--bg2-light);
+  padding: 1em;
+  margin: 1.5em 0;
+  border-left: 4px solid var(--accent1);
+  color: var(--text-light);
+}
+
+/* === GAME CANVAS === */
 .gm4html5_div_class {
   display: flex;
   justify-content: center;
@@ -163,43 +230,20 @@ canvas {
   color: var(--text2-light);
 }
 
-/* === CHECKLIST / TASK LIST STYLES === */
-.task-list {
-  list-style: none;
-}
-.task-list-item {
-  position: relative;
-  padding-left: 2em;
-  margin: 0.5em 0;
-}
-.task-list-item input[type="checkbox"] {
-  position: absolute;
-  left: 0;
-  top: 0.3em;
-  transform: scale(1.2);
-}
-.task-list-item input[type="checkbox"]:checked + span {
-  text-decoration: line-through;
-  color: var(--text2-light);
-}
-
-/* === BLOCKQUOTE STYLES === */
-blockquote {
-  background-color: var(--bg2-light);
-  padding: 1em;
-  margin: 1.5em 0;
-  border-left: 4px solid var(--accent1);
-  color: var(--text-light);
-}
-
-/* === DARK MODE OVERRIDES === */
+/* === DARK MODE === */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--bg-dark);
     color: var(--text-dark);
   }
+  h1, h2, h3, h4 {
+    color: var(--text-dark);
+  }
+  h5, h6 {
+    color: var(--text2-dark);
+  }
   h1 {
-    border-bottom: 2px solid var(--line-dark);
+    border-bottom: 2px solid var(--accent1);
   }
   .site-header, .site-footer {
     background-color: var(--bg2-dark);
@@ -210,8 +254,18 @@ blockquote {
   .site-nav a:hover {
     color: var(--accent2);
   }
-  table, th, td {
-    border-color: var(--line-dark);
+  table {
+    border: 1px solid var(--line-dark);
+  }
+  th, td {
+    border: 1px solid var(--line-dark);
+  }
+  th {
+    background-color: var(--bg2-dark);
+    color: var(--text-dark);
+  }
+  tbody tr:nth-child(even) {
+    background-color: #2a2a2a;
   }
   canvas {
     border-color: var(--line-dark);
@@ -221,13 +275,6 @@ blockquote {
   }
   .social-links a:hover {
     color: var(--accent2);
-  }
-  .site-footer {
-    color: var(--text2-dark);
-    border-top: 1px solid var(--line-dark);
-  }
-  .footer-copy {
-    color: var(--text2-dark);
   }
   blockquote {
     background-color: var(--bg2-dark);
