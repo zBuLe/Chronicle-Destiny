@@ -83,8 +83,6 @@ if (keyboard_check(vk_left)) {
 * [ ] Add checklist support
 * [x] Review markdown styles
 
-````
-
 ---
 
 
