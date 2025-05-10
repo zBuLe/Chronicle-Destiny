@@ -85,6 +85,13 @@ h1 {
 text-align: center;
 background-color: var(--bg2-light);
 }
+
+.site-header h1{
+  border-bottom: 0px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 .site-title {
 font-size: 2em;
 font-family: var(--font-family);
