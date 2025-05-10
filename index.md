@@ -26,10 +26,4 @@ title: Chronicle Destiny
 
 ---
 
-* [📜 Game Design Document](/gdd/chronicle-destiny-gdd)
-* [🛠️ Devlog](devlog)
-* [📝 Change Log](changelog)
-* [🗺️ Roadmap](roadmap)
-{: .docs }
-
 
