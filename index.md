@@ -14,8 +14,6 @@ title: Chronicle Destiny
 
 ---
 
-## Basic Controls
-
 | Action         | Key/Button          | Gamepad Button       | Description                  |
 |----------------|---------------------|----------------------|------------------------------|
 | Movement       | W/A/S/D             | Left Stick           | Move the character           |
@@ -28,4 +26,4 @@ title: Chronicle Destiny
 * [🛠️ Devlog](devlog)
 * [📝 Change Log](changelog)
 * [🗺️ Roadmap](roadmap)
-{: .nav-list }
+{: .docs }
