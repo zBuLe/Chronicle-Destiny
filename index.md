@@ -14,6 +14,14 @@ title: Chronicle Destiny
 
 ---
 
+* [📜 Game Design Document](/gdd/chronicle-destiny-gdd)
+* [🛠️ Devlog](devlog)
+* [📝 Change Log](changelog)
+* [🗺️ Roadmap](roadmap)
+{: .docs }
+
+---
+
 | Action         | Key/Button          | Gamepad Button       | Description                  |
 |----------------|---------------------|----------------------|------------------------------|
 | Movement       | W/A/S/D             | Left Stick           | Move the character           |
@@ -22,8 +30,4 @@ title: Chronicle Destiny
 | Rotate/Select  | Q / E               | Bumper Buttons       | Rotate or select an option   |
 
 
-* [📜 Game Design Document](/gdd/chronicle-destiny-gdd)
-* [🛠️ Devlog](devlog)
-* [📝 Change Log](changelog)
-* [🗺️ Roadmap](roadmap)
-{: .docs }
+
