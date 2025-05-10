@@ -67,7 +67,15 @@ var playerSpeed = 4;
 if (keyboard_check(vk_left)) {
     x -= playerSpeed;
 }
-````
+```
+
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
 
 ## Checklist
 
