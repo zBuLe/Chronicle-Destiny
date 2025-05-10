@@ -80,6 +80,13 @@ h1 {
   margin-bottom: 0.5em;
 }
 
+hr {
+  border: none;
+  border-top: 2px solid var(--line-light);
+  margin: 2em 0;
+}
+
+
 /* === HEADER === */
 .site-header {
 text-align: center;
@@ -176,6 +183,9 @@ body {
 }
 h1 {
   border-bottom: 2px solid var(--line-dark);
+}
+hr {
+  border-top: 2px solid var(--line-dark);
 }
 .site-header, .site-footer {
   background-color: var(--bg2-dark);
