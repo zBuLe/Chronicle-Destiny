@@ -26,18 +26,15 @@ body {
   --primary-color: #6495ED;
 }
 
-/* Reset media elements */
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
 
-/* Form element reset */
 input, button, textarea, select {
   font: inherit;
 }
 
-/* Text wrapping */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
@@ -54,7 +51,6 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-
 /* === LAYOUT === */
 
 .container {
@@ -63,8 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1em;
 }
 
-
-/* === GLOBAL ELEMENTS === */
+/* === LINKS === */
 
 a {
   color: var(--primary-color);
@@ -76,19 +71,16 @@ a:hover {
   color: #4169E1;
 }
 
-
 /* === HEADER === */
 
 .site-header {
   text-align: center;
-  margin-bottom: 2em;
 }
 
 .site-title {
   font-size: 2em;
   font-family: Consolas, monospace;
   color: var(--primary-color);
-  margin: 0.5em 0;
 }
 
 .site-nav {
@@ -106,7 +98,6 @@ a:hover {
 .site-nav a:hover {
   color: var(--primary-color);
 }
-
 
 /* === NAVIGATION BAR === */
 
@@ -143,6 +134,7 @@ a:hover {
   border-right: 1px solid #444;
 }
 
+/* Responsive: stack nav on very small screens */
 @media (max-width: 600px) {
   .nav-list {
     flex-direction: column;
@@ -155,7 +147,6 @@ a:hover {
     border-bottom: 1px solid #444;
   }
 }
-
 
 /* === TABLES === */
 
@@ -171,7 +162,6 @@ th, td {
   text-align: left;
 }
 
-
 /* === GAME CANVAS === */
 
 .gm4html5_div_class {
@@ -186,23 +176,41 @@ canvas {
   border: 1px solid #ccc;
 }
 
+/* === DEV DOCS LINKS === */
 
-/* Style for markdown task list checkboxes */
-input[type="checkbox"] {
-  transform: scale(1.2);
-  margin-right: 0.5em;
+.docs {
+  list-style: none;
+  padding: 0;
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }
 
+.docs li {
+  margin: 0;
+}
 
+.docs a {
+  font-family: Consolas, monospace;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
 
+.docs a:hover {
+  background: var(--primary-color);
+  color: white;
+}
 
-/* === SOCIAL ICONS === */
+/* === SOCIAL ICONS FOOTER === */
 
 .social-links {
   display: flex;
   justify-content: center;
   gap: 1em;
-  margin-top: 2em;
+
 }
 
 .social-links a {
@@ -217,7 +225,7 @@ input[type="checkbox"] {
   color: aliceblue;
 }
 
-/* Optional: support for SVG icons */
+/* Optional: custom SVG icon fallback */
 .social-links .social-icon svg {
   display: block;
   width: 100%;
@@ -230,15 +238,14 @@ input[type="checkbox"] {
   fill: aliceblue;
 }
 
-
 /* === FOOTER === */
 
 .site-footer {
   text-align: center;
-  padding: 2em 1em;
+  padding: 1em 1em;
   background-color: #111;
   color: #888;
-  margin-top: 3em;
+
   border-top: 1px solid #444;
 }
 
@@ -247,7 +254,6 @@ input[type="checkbox"] {
   font-size: 0.9em;
   color: #666;
 }
-
 
 /* === DARK MODE === */
 
