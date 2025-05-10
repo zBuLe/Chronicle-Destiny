@@ -14,13 +14,6 @@ title: Chronicle Destiny
 <script type="text/javascript" src="html5game/Chronicle-Destiny.js?cachebust=918507098"></script>
 <script>window.onload = GameMaker_Init;</script>
 
----
-
-* [📜 Game Design Document](/gdd/chronicle-destiny-gdd)
-* [🛠️ Devlog](devlog)
-* [📝 Change Log](changelog)
-* [🗺️ Roadmap](roadmap)
-{: .docs }
 
 ---
 
@@ -31,5 +24,12 @@ title: Chronicle Destiny
 | Action         | K                   | A Button             | Perform an action            |
 | Rotate/Select  | Q / E               | Bumper Buttons       | Rotate or select an option   |
 
+---
+
+* [📜 Game Design Document](/gdd/chronicle-destiny-gdd)
+* [🛠️ Devlog](devlog)
+* [📝 Change Log](changelog)
+* [🗺️ Roadmap](roadmap)
+{: .docs }
 
 
