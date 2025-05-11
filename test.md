@@ -118,20 +118,6 @@ This is an indented code block.
 >
 > **Warning:** Be careful with experimental features!
 
-## Details (Collapsible Section)
-
-<details>
-<summary>Click to expand!</summary>
-
-This is hidden content inside a collapsible section.
-
-You can add **markdown formatting** here too!
-
-```bash
-echo "Hello from inside details!"
-```
-
-</details>
 
 ## Horizontal Rule
 
@@ -166,23 +152,27 @@ Orange
 Banana
 :   An elongated, edible fruit.
 
-## Emoji
+## other
 
-Here’s some emoji: 🎉 🚀 😄 👍
+### My Great Heading {#custom-id}
 
-## Table of Contents Test
+Gone camping! :tent: Be back soon.
 
-# Top Level Heading
+That is so funny! :joy:
 
-## Subheading A
 
-### Sub-subheading A.1
+I need to highlight these ==very important words==.
 
-## Subheading B
+H~2~O
 
-### Sub-subheading B.1
+X^2^
 
----
+http://www.example.com
 
-End of test file.
+`http://www.example.com`
 
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+[Heading IDs](#custom-id)
