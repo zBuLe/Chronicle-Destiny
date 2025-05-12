@@ -120,29 +120,34 @@ main hr {
 }
 
 /* =========================
-   Tables
+   Tables (
    ========================= */
+
 main table {
+    border: 1px solid var(--line-color);      /* outer border only */
     border-collapse: collapse;
-    margin: 1rem;
+    margin: 1rem auto;
+    font-size: 1em;
 }
 
-main table, main th, main td {
-    border: 1px solid var(--line-color);
-}
-
-main th, main td {
-    padding: 0.5rem 0.5rem;
-    text-align: left;
-}
-
-main thead {
-    background-color: var(--text-color);
+main th {
+    border-bottom: 1px solid var(--line-color); /* header underline */
+    background-color: var(--text-color);        /* your current dark header style */
     color: var(--bg-color);
     font-weight: bold;
+    text-align: left;
+    padding: 0.5rem;
 }
 
-/* Striped rows */
+main td {
+    padding: 0.5rem;
+}
+
+main td + td {
+    border-left: 1px solid var(--line-color);   /* column separators only */
+}
+
+/* Striped rows for readability */
 main tbody tr:nth-child(odd) {
     background-color: var(--bg-color);
 }
