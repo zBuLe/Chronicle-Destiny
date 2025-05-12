@@ -98,6 +98,16 @@ main {
     margin: 0 auto;
 }
 
+.gm4html5_div_class {
+  text-align: center;
+  margin: 2em auto;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
 /* =========================
    Footer
    ========================= */

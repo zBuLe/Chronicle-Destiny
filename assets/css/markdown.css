@@ -11,7 +11,7 @@
 
 main h1 {
     font-size: 2.5rem;
-    border-bottom: 2px solid var(--accent1-color);
+    border-bottom: 2px solid var(--line-color);
 }
 
 main h2 {
@@ -64,7 +64,7 @@ main .task-list-item input[type="checkbox"] {
    Blockquotes
    ========================= */
 main blockquote {
-    border-left: 4px solid var(--accent1-color);
+    border-left: 4px solid var(--line-color);
     padding-left: 1rem;
     color: var(--text2-color);
     background: var(--bg2-color);
