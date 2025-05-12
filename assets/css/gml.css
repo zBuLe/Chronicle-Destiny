@@ -1,13 +1,12 @@
 /* === GML-STYLED CODE BLOCK (faked via ```java) === */
 .language-java pre {
-  background: #222222;
-  color: #C0C0C0;
-  padding: 1em;
-  overflow-x: auto;
+
   border: 2px solid #039D5B;
   font-family: Consolas, monospace;
-  font-size: 0.95em;
-  line-height: 1.5;
+}
+
+main .language-java .code-header {
+  background: #039D5B;
 }
 
 /* === Rouge Token Styles for GML Look === */
@@ -15,7 +14,6 @@
 /* Comments */
 .language-java .highlight .c1 {
   color: #5B995B;
-  font-style: italic;
 }
 
 /* Numbers (integer & float) and constants */

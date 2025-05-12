@@ -74,26 +74,40 @@ main blockquote {
 /* =========================
    Code
    ========================= */
-main code {
-    background-color: var(--bg2-color);
-    color: var(--text-color);
-    padding: 0.2em 0.4em;
-    font-family:  var(--mono-font);
-}
+main .code-header {
+            background-color: #333;
+            color: white;
+            padding: 0.5em 1em;
+            font-family:  var(--mono-font);
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+      font-size: 0.9em;
+        }
 
-main pre {
+main .code-header button {
+  background-color: var(--bg2-color);
+  border: none;
+  color: var(--text-color);
+  padding: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.7em;
+  margin: 0em;
+  cursor: pointer;
+        }
+main pre{
     background-color: var(--bg2-color);
-    color: var(--text-color);
-    padding: 1rem;
+    margin: 0 0 2em 0;
+border: 1px solid var(--line-color);
+       padding: 0.5rem 1em;
     overflow-x: auto;
-    border: 1px solid var(--line-color);
-    margin: 1.5rem 0;
-    font-size: 0.95rem;
+    font-family:  var(--mono-font)
 }
-
-main pre code {
-    background: none;
-    padding: 0;
+main code {
+    font-family:  var(--mono-font)
 }
 
 /* =========================

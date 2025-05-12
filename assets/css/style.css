@@ -3,7 +3,7 @@
    ========================= */
    :root {
     --text-font: 'Calibri', Tahoma, Geneva, Verdana, sans-serif;
-    --mono-font: 'Courier New', Courier, monospace;
+    --mono-font: Consolas, 'Courier New', Courier, monospace;
     /* Light mode */
     --bg-color: #eee;
     --bg2-color: #ddd;
