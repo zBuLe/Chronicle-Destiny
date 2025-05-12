@@ -18,7 +18,7 @@ document.querySelectorAll('div[class^="language-"]').forEach(function(codeBlock)
 
         navigator.clipboard.writeText(cleanedCode.trim()).then(function() {
             copyButton.innerHTML = '<i class="fas fa-check"></i>';   // ← Show checkmark
-            setTimeout(() => copyButton.innerHTML = '<i class="fas fa-clipboard"></i>', 3000);
+            setTimeout(() => copyButton.innerHTML = '<i class="fas fa-clipboard"></i>', 2000);
         }).catch(function(err) {
             alert('Failed to copy code: ' + err);
         });
