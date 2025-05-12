@@ -4,6 +4,7 @@
    :root {
     --text-font: 'Calibri', Tahoma, Geneva, Verdana, sans-serif;
     --mono-font: Consolas, 'Courier New', Courier, monospace;
+
     /* Light mode */
     --bg-color: #eee;
     --bg2-color: #ddd;
@@ -14,25 +15,21 @@
     --accent2-color: MidnightBlue;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        /* Dark mode */
-        --bg-color: #222;
-        --bg2-color: #1a1a1a;
-        --text-color: #dddddd;
-        --text2-color: #aaaaaa;
-        --line-color: #444444;
-        --accent1-color: cornflowerblue;
-        --accent2-color: #add8e6; /* More balanced color for dark mode */
-    }
+/* Manual dark mode toggle overrides */
+[data-theme="dark"] {
+    --bg-color: #222;
+    --bg2-color: #1a1a1a;
+    --text-color: #dddddd;
+    --text2-color: #aaaaaa;
+    --line-color: #444444;
+    --accent1-color: cornflowerblue;
+    --accent2-color: #add8e6;
 }
 
 /* =========================
    Reset
    ========================= */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -42,7 +39,7 @@
    Base Styles
    ========================= */
 body {
-    font-family: 'Calibri', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--text-font);
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.5;
@@ -89,6 +86,11 @@ a:hover {
     color: var(--accent2-color);
 }
 
+/* Dark mode toggle button */
+#theme-toggle {
+    cursor: pointer;
+}
+
 /* =========================
    Main Layout
    ========================= */
@@ -99,13 +101,13 @@ main {
 }
 
 .gm4html5_div_class {
-  text-align: center;
-  margin: 2em auto;
+    text-align: center;
+    margin: 2em auto;
 }
 
 canvas {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 /* =========================
@@ -135,7 +137,6 @@ canvas {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-    /*! margin: 1rem; */
 }
 
 .social-links a {
