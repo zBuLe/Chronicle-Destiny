@@ -26,7 +26,14 @@
         // Create the title bar div
         const headerDiv = document.createElement('div');
         headerDiv.className = 'code-header';
-        headerDiv.textContent = codeBlock.classList[0].replace('language-', '').toUpperCase(); // Use the language as title
+        
+        // Special case for Java, label it as "GameMaker Language"
+        let language = codeBlock.classList[0].replace('language-', '').toUpperCase();
+        if (language === 'JAVA') {
+            language = 'GameMaker Language'; // Special label for Java
+        }
+        
+        headerDiv.textContent = language; // Use the adjusted language name
         
         // Insert it as the first child of the codeBlock div
         codeBlock.insertBefore(headerDiv, codeBlock.firstChild);
