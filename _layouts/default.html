@@ -15,55 +15,16 @@
   <header class="site-header">
     {% include header.html %}
   </header>
+
   <main>
     {{ content }}
   </main>
+
   <footer class="site-footer">
     {% include footer.html %}
   </footer>
-  <script>
-    document.querySelectorAll('div[class^="language-"]').forEach(function(codeBlock) {
-        // Create the title bar div
-        const headerDiv = document.createElement('div');
-        headerDiv.className = 'code-header';
-        
-        // Special case for Java, label it as "GML"
-        let language = codeBlock.classList[0].replace('language-', '').toUpperCase();
-        if (language === 'JAVA') {
-            language = 'GML'; // Special label for Java
-        }
-        headerDiv.textContent = language;
-    
-        // Create the Copy button
-        const copyButton = document.createElement('button');
-        copyButton.textContent = 'Copy';
-    
-        // Add click event to copy code
-        copyButton.addEventListener('click', function() {
-            const codeElement = codeBlock.querySelector('pre code');
-            if (!codeElement) return;  // Safety check
-    
-            let code = codeElement.textContent;
-    
-            // Remove 16 leading spaces from each line
-            let cleanedCode = code.replace(/^ {16}/gm, '');
-            // Remove first empty line if exists
-            cleanedCode = cleanedCode.replace(/^\n/, '');
-    
-            // Trim and copy to clipboard
-            navigator.clipboard.writeText(cleanedCode.trim()).then(function() {
-                copyButton.textContent = '✓ Copied!';
-                setTimeout(() => copyButton.textContent = 'Copy', 3000);
-            }).catch(function(err) {
-                alert('Failed to copy code: ' + err);
-            });
-        });
-    
-        // Append button to header and insert header
-        headerDiv.appendChild(copyButton);
-        codeBlock.insertBefore(headerDiv, codeBlock.firstChild);
-    });
-    </script>
-    
+
+  <!-- Code block title bar & copy button -->
+  <script src="{{ '/assets/js/code-titlebar.js' | relative_url }}"></script>
 </body>
 </html>
