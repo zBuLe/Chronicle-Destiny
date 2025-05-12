@@ -1,27 +1,27 @@
 /* =========================
    Design Tokens
    ========================= */
-   :root {
+:root {
     /* Light mode */
-    --bg-color: #f9f9f9;
-    --bg2-color: #ffffff;
+    --bg-color: #eee;
+    --bg2-color: #ddd;
     --text-color: #333333;
-    --text2-color: #666666;
-    --line-color: #cccccc;
+    --text2-color: #555;
+    --line-color: #999;
     --accent1-color: cornflowerblue;
-    --accent2-color: aliceblue;
+    --accent2-color: MidnightBlue;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         /* Dark mode */
-        --bg-color: #1e1e1e;
-        --bg2-color: #2a2a2a;
+        --bg-color: #222;
+        --bg2-color: #1a1a1a;
         --text-color: #dddddd;
         --text2-color: #aaaaaa;
         --line-color: #444444;
         --accent1-color: cornflowerblue;
-        --accent2-color: #333344;
+        --accent2-color: #add8e6; /* More balanced color for dark mode */
     }
 }
 
@@ -40,10 +40,10 @@
    Base Styles
    ========================= */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Calibri', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 a {
@@ -52,7 +52,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    color: var(--accent2-color);
 }
 
 /* =========================
@@ -61,14 +61,13 @@ a:hover {
 .site-header {
     background-color: var(--bg2-color);
     color: var(--text-color);
-    padding: 1.5rem;
+    padding: 0.5rem;
     text-align: center;
-    border-bottom: 2px solid var(--line-color);
 }
 
 .site-title {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .site-nav {
@@ -79,13 +78,13 @@ a:hover {
 }
 
 .site-nav a {
-    color: var(--text-color);
-    font-size: 1rem;
+    color: var(--accent1-color);
+    font-size: 1em;
     transition: color 0.3s ease;
 }
 
 .site-nav a:hover {
-    color: var(--accent1-color);
+    color: var(--accent2-color);
 }
 
 /* =========================
@@ -93,7 +92,6 @@ a:hover {
    ========================= */
 main {
     min-height: 80vh;
-    padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -105,17 +103,16 @@ main {
     background-color: var(--bg2-color);
     color: var(--text2-color);
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 0.9rem;
-    border-top: 2px solid var(--line-color);
 }
 
 .site-footer a {
-    color: var(--text2-color);
+    color: var(--accent1-color);
 }
 
 .site-footer a:hover {
-    color: var(--text-color);
+    color: var(--accent2-color);
 }
 
 /* =========================
@@ -126,17 +123,17 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 0.5rem;
+    /*! margin: 1rem; */
 }
 
 .social-links a {
-    color: var(--text2-color);
+    color: var(--accent1-color);
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: var(--text-color);
+    color: var(--accent2-color);
 }
 
 /* =========================
