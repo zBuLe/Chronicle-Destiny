@@ -27,15 +27,44 @@
         const headerDiv = document.createElement('div');
         headerDiv.className = 'code-header';
         
-        // Special case for Java, label it as "GameMaker Language"
+        // Special case for Java, label it as "GML"
         let language = codeBlock.classList[0].replace('language-', '').toUpperCase();
         if (language === 'JAVA') {
-            language = 'GameMaker Language'; // Special label for Java
+            language = 'GML'; // Special label for Java
         }
         
         headerDiv.textContent = language; // Use the adjusted language name
         
-        // Insert it as the first child of the codeBlock div
+        // Create the Copy button
+        const copyButton = document.createElement('button');
+        copyButton.textContent = 'Copy';
+        
+        // Add click event listener to copy the code to clipboard
+        copyButton.addEventListener('click', function() {
+            const code = codeBlock.querySelector('pre code').textContent;
+            
+            // Remove exactly 16 leading spaces from each line and remove the first empty line
+            let cleanedCode = code.replace(/^ {16}/gm, ''); // Remove 16 leading spaces from each line
+            cleanedCode = cleanedCode.replace(/^\n/, ''); // Remove the first empty line if it exists
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(cleanedCode).then(function() {
+                // Change the button text to "✓ Copied!"
+                copyButton.textContent = '✓ Copied!';
+                
+                // After 5 seconds, change the button text back to "Copy"
+                setTimeout(function() {
+                    copyButton.textContent = 'Copy';
+                }, 5000); // 5 seconds
+            }).catch(function(err) {
+                alert('Failed to copy code: ' + err);
+            });
+        });
+        
+        // Append the button to the header div
+        headerDiv.appendChild(copyButton);
+        
+        // Insert the headerDiv as the first child of the codeBlock div
         codeBlock.insertBefore(headerDiv, codeBlock.firstChild);
     });
 </script>
