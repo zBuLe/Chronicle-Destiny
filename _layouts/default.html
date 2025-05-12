@@ -21,5 +21,16 @@
   <footer class="site-footer">
     {% include footer.html %}
   </footer>
+  <script>
+    document.querySelectorAll('div[class^="language-"]').forEach(function(codeBlock) {
+        // Create the title bar div
+        const headerDiv = document.createElement('div');
+        headerDiv.className = 'code-header';
+        headerDiv.textContent = codeBlock.classList[0].replace('language-', '').toUpperCase(); // Use the language as title
+        
+        // Insert it as the first child of the codeBlock div
+        codeBlock.insertBefore(headerDiv, codeBlock.firstChild);
+    });
+</script>
 </body>
 </html>
