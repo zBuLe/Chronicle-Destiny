@@ -52,10 +52,10 @@
                 // Change the button text to "✓ Copied!"
                 copyButton.textContent = '✓ Copied!';
                 
-                // After 5 seconds, change the button text back to "Copy"
+                // After 3 seconds, change the button text back to "Copy"
                 setTimeout(function() {
                     copyButton.textContent = 'Copy';
-                }, 5000); // 5 seconds
+                }, 3000); // 3 seconds
             }).catch(function(err) {
                 alert('Failed to copy code: ' + err);
             });
