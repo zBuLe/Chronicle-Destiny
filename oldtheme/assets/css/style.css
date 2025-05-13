@@ -11,8 +11,8 @@
     --text-color: #333333;
     --text2-color: #555;
     --line-color: #999;
-    --accent1-color: cornflowerblue;
-    --accent2-color: MidnightBlue;
+    --link-color: cornflowerblue;
+    --hover-color: MidnightBlue;
 }
 
 /* Manual dark mode toggle overrides */
@@ -22,8 +22,8 @@
     --text-color: #dddddd;
     --text2-color: #aaaaaa;
     --line-color: #444444;
-    --accent1-color: cornflowerblue;
-    --accent2-color: #add8e6;
+    --link-color: cornflowerblue;
+    --hover-color: #add8e6;
 }
 
 /* =========================
