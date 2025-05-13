@@ -8,36 +8,10 @@
 </head>
 <body>
 
-    <!-- Left sidenav -->
-    <header id="mySidenav" class="sidenav">
-        <div class="topline">
-            <span class="openbtn" onclick="toggleNav()">&#9776;</span>
-        </div>
-        <a href="/">Alpha</a>
-        <a href="/gdd/chronicle-destiny-gdd">GDD</a>
-        <a href="/devlog">Devlog</a>
-        <a href="/changelog">Change Log</a>
-        <a href="/roadmap">Roadmap</a>
-    </header>
+    {% include header.html %}
+    {% include toc.html %}
+    {% include topline.html %}
 
-    <!-- Right TOC panel -->
-    <aside id="myTOC" class="toc">
-        <div class="topline">
-            <span class="openbtn" onclick="toggleTOC()">📑</span>
-        </div>
-        <a href="#">Section 1</a>
-        <a href="#">Section 2</a>
-        <a href="#">Section 3</a>
-    </aside>
-
-    <!-- Topline main header -->
-    <div class="topline">
-        <span class="openbtn" onclick="toggleNav()">&#9776;</span>
-        Title
-        <span class="openbtn" onclick="toggleTOC()">📑</span>
-    </div>
-
-    <!-- Main content injected by Jekyll -->
     <main id="main">
         {{ content }}
     </main>
