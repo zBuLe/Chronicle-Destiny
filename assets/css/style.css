@@ -25,6 +25,17 @@
     --hover-color: #add8e6;
 }
 
+/* Smooth transition add-on */
+html {
+    transition: background-color 0.3s, color 0.3s;
+}
+body, .sidenav, .toc, .topline {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+a, button, #theme-toggle {
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
 /* ======================
    Reset and Base
    ====================== */
@@ -90,7 +101,6 @@ a:hover {
     transition: 0.5s;
 }
 
-
 /* Right TOC panel */
 .toc {
     height: 100%;
@@ -103,7 +113,9 @@ a:hover {
     overflow-x: hidden;
     transition: 0.5s;
 }
-.sidenav a ,.toc a {
+
+/* Link styles for nav and toc */
+.sidenav nav a, .toc div a {
     text-decoration: none;
     font-size: 1em;
     color: var(--text2-color);
@@ -116,7 +128,8 @@ a:hover {
     color: var(--text-color);
 }
 
-header nav, aside div{
+/* Add padding under topline */
+header nav, aside div {
     padding-top: 3em;
 }
 
@@ -136,10 +149,10 @@ header nav, aside div{
     height: 3em;
 }
 
+/* Add space between title and toggle */
 .topline span button {
-  margin-left: 0.5em;
+    margin-left: 0.5em;
 }
-
 
 /* Buttons in topline */
 .openbtn {
