@@ -1,7 +1,4 @@
+title: My Custom Theme
+description: A simple GitHub Pages site with a collapsible sidebar
 markdown: kramdown
 theme: null
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default

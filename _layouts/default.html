@@ -1,45 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 
-<div class="container">
-  <aside id="left-panel" class="panel left-panel">
-    <!-- Left collapsible navigation -->
-    <button class="collapse-btn" onclick="togglePanel('left')">☰</button>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/page2.html">Page 2</a></li>
-        <!-- Add more links -->
-      </ul>
-    </nav>
-  </aside>
-
-  <main id="main-content">
-    {{ content }}
-  </main>
-
-  <aside id="right-panel" class="panel right-panel">
-    <!-- Right collapsible content -->
-    <button class="collapse-btn" onclick="togglePanel('right')">☰</button>
-    <div class="right-content">
-      <!-- Stuff here -->
+    <div id="sidebar">
+        <h2>{{ site.title }}</h2>
+        <ul>
+            {% for page in site.pages %}
+                {% if page.title %}
+                    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
     </div>
-  </aside>
-</div>
 
-<script>
-function togglePanel(side) {
-  const panel = document.getElementById(side + '-panel');
-  panel.classList.toggle('collapsed');
-}
-</script>
+    <div id="main">
+        <button id="toggle-button">☰</button>
+        {{ content }}
+    </div>
+
+    <script>
+        document.getElementById("toggle-button").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("collapsed");
+        });
+    </script>
 
 </body>
 </html>
