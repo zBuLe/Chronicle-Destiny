@@ -1,95 +1,178 @@
-/* ======================   Variable Themes   ====================== */
-:root {
-  --text-font: 'Calibri', Tahoma, Geneva, Verdana, sans-serif;
-  --mono-font: Consolas, 'Courier New', Courier, monospace;
+/* ======================
+   Variable Themes
+   ====================== */
+   :root {
+    --text-font: 'Calibri', Tahoma, Geneva, Verdana, sans-serif;
+    --mono-font: Consolas, 'Courier New', Courier, monospace;
 
-  /* Light mode */
-  --bg-color: #eee;
-  --bg2-color: #ddd;
-  --text-color: #333333;
-  --text2-color: #555;
-  --line-color: #999;
-  --link-color: cornflowerblue;
-  --hover-color: MidnightBlue;
+    /* Light mode */
+    --bg-color: #eee;
+    --bg2-color: #ddd;
+    --text-color: #333333;
+    --text2-color: #555;
+    --line-color: #999;
+    --link-color: cornflowerblue;
+    --hover-color: MidnightBlue;
 }
 
-/* Dark mode override */
 [data-theme="dark"] {
-  --bg-color: #222;
-  --bg2-color: #1a1a1a;
-  --text-color: #dddddd;
-  --text2-color: #aaaaaa;
-  --line-color: #444444;
-  --link-color: cornflowerblue;
-  --hover-color: #add8e6;
+    --bg-color: #222;
+    --bg2-color: #1a1a1a;
+    --text-color: #dddddd;
+    --text2-color: #aaaaaa;
+    --line-color: #444444;
+    --link-color: cornflowerblue;
+    --hover-color: #add8e6;
 }
 
-/* ======================   Reset & Base   ====================== */
-*, *::before, *::after { box-sizing: border-box; }
-* { margin: 0; padding: 0; }
-@media (prefers-reduced-motion: no-preference) { html { interpolate-size: allow-keywords; }}
+/* ======================
+   Reset and Base
+   ====================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+    html { interpolate-size: allow-keywords; }
+}
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-family: var(--text-font);
-  background-color: var(--bg-color);
-  color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--text-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
-img, picture, video, canvas, svg { display: block; max-width: 100%; }
-input, button, textarea, select { font: inherit; }
-p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
-a { color: var(--link-color); text-decoration: none; }
-a:hover { color: var(--hover-color); }
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--hover-color);
+}
 
-/* ======================   Layout   ====================== */
-.sidenav, .toc, .topline { background-color: var(--bg2-color); color: var(--text-color); }
+/* ======================
+   Layout Styles
+   ====================== */
 
 /* Left sidenav */
 .sidenav {
-  height: 100%; width: 0; position: fixed; z-index: 1; top: 0; left: 0;
-  overflow-x: hidden; transition: 0.5s;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--bg2-color);
+    overflow-x: hidden;
+    transition: 0.5s;
 }
-.sidenav a { display: block; padding: 12px 24px; font-size: 1em;
-  color: var(--text2-color); transition: 0.3s;
+.sidenav a {
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--text2-color);
+    display: block;
+    transition: 0.3s;
+    padding: 12px 24px;
 }
-.sidenav a:hover { color: var(--text-color); }
+.sidenav a:hover {
+    color: var(--text-color);
+}
 
 /* Right TOC panel */
 .toc {
-  height: 100%; width: 0; position: fixed; z-index: 1; top: 0; right: 0;
-  overflow-x: hidden; transition: 0.5s;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--bg2-color);
+    overflow-x: hidden;
+    transition: 0.5s;
 }
-.toc a { display: block; padding: 12px 24px; font-size: 1em;
-  color: var(--text2-color); transition: 0.3s;
+.toc a {
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--text2-color);
+    display: block;
+    transition: 0.3s;
+    padding: 12px 24px;
 }
-.toc a:hover { color: var(--text-color); }
+.toc a:hover {
+    color: var(--text-color);
+}
 
-/* Topline */
+/* Topline (header bar) */
 .topline {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 2;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 10px 15px; height: 50px;
-}
-.openbtn {
-  font-size: 1.5em; line-height: 1; cursor: pointer; background: none;
-  border: none; color: var(--text-color);
-}
-#theme-toggle {
-  font-size: 1.2em; background: none; border: none;
-  cursor: pointer; color: var(--text-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg2-color);
+    color: var(--text-color);
+    padding: 10px 15px;
+    height: 50px;
 }
 
-/* Main content */
-main {
-  flex-grow: 1; overflow-y: auto;
-  transition: margin-left 0.5s, margin-right 0.5s;
-  padding: 70px 1em 1em;
-  min-height: 0;
+/* Buttons in topline */
+.openbtn {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--text-color);
+    background: none;
+    border: none;
+    line-height: 1;
 }
+
+/* Dark mode toggle button */
+#theme-toggle {
+    font-size: 1.2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 0 0.5em;
+}
+
+/* Main content area: pushable and scrollable */
+main {
+    flex-grow: 1;
+    overflow-y: auto;
+    transition: margin-left 0.5s, margin-right 0.5s;
+    padding: 70px 1em 1em; /* spacing for fixed topline */
+    min-height: 0;
+}
+
+/* Content container inside main */
 main > * {
-  width: 100%; max-width: 800px; margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
