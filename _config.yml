@@ -1,5 +1,3 @@
-title: Chronicle Destiny
-description: A site with my very own Jekyll theme
-
+title: My Site
 markdown: kramdown
-highlighter: rouge
+theme: null
