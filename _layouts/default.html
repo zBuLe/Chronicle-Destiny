@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
 </head>
 <body>
 
-  <div id="sidebar">
-    <button id="collapse-button">☰</button> <!-- toggle inside panel -->
-    <h2>{{ site.title }}</h2>
-    <ul>
-        {% for page in site.pages %}
-            {% if page.title %}
-                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-</div>
+    <!-- Left sidenav -->
+    <header id="mySidenav" class="sidenav">
+        <div class="topline">
+            <span class="openbtn" onclick="toggleNav()">&#9776;</span>
+        </div>
+        <a href="/">Alpha</a>
+        <a href="/gdd/chronicle-destiny-gdd">GDD</a>
+        <a href="/devlog">Devlog</a>
+        <a href="/changelog">Change Log</a>
+        <a href="/roadmap">Roadmap</a>
+    </header>
 
-<div id="main">
-    <button id="expand-button">☰</button> <!-- toggle in main area -->
-    <div class="content-wrapper">
-        {{ content }}
+    <!-- Right TOC panel -->
+    <aside id="myTOC" class="toc">
+        <div class="topline">
+            <span class="openbtn" onclick="toggleTOC()">📑</span>
+        </div>
+        <a href="#">Section 1</a>
+        <a href="#">Section 2</a>
+        <a href="#">Section 3</a>
+    </aside>
+
+    <!-- Topline main header -->
+    <div class="topline">
+        <span class="openbtn" onclick="toggleNav()">&#9776;</span>
+        Title
+        <span class="openbtn" onclick="toggleTOC()">📑</span>
     </div>
-</div>
 
-  
+    <!-- Main content injected by Jekyll -->
+    <main id="main">
+        {{ content }}
+    </main>
 
-<script>
-  const sidebar = document.getElementById("sidebar");
-  const collapseButton = document.getElementById("collapse-button");
-  const expandButton = document.getElementById("expand-button");
-
-  collapseButton.addEventListener("click", () => {
-      sidebar.classList.add("collapsed");
-  });
-
-  expandButton.addEventListener("click", () => {
-      sidebar.classList.remove("collapsed");
-  });
-</script>
-
-
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 </body>
 </html>

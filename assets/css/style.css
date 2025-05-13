@@ -1,129 +1,132 @@
-/* Reset */
+/* ======================
+   Reset and base styles
+   ====================== */
+
+   *, *::before, *::after {
+    box-sizing: border-box;
+}
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
-
+@media (prefers-reduced-motion: no-preference) {
+    html { interpolate-size: allow-keywords; }
+}
 body {
-  font-family: system-ui, sans-serif;
-  display: flex;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Lato", sans-serif;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+p { text-wrap: pretty; }
+h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+#root, #__next { isolation: isolate; }
+
+/* ======================
+   Layout styles
+   ====================== */
+
+/* Left sidenav */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.sidenav a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    padding: 12px 24px;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
 }
 
-
-
-/* Sidebar */
-#sidebar {
-  width: 250px;
-  background-color: #202123;
-  color: white;
-  overflow-y: auto;
-  transition: width 0.3s;
-  padding: 1rem;
+/* Right TOC panel */
+.toc {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.toc a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    padding: 12px 24px;
+}
+.toc a:hover {
+    color: #f1f1f1;
 }
 
-#sidebar.collapsed {
-  width: 60px;
-}
-
-#sidebar h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-#sidebar ul {
-  list-style: none;
-}
-
-#sidebar li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  padding: 0.5rem 0;
-}
-
-#sidebar li a:hover {
-  background-color: #333;
-}
-
-/* Main content */
-#main {
-  flex: 1;
-  background-color: #f7f7f8;
-  display: flex;              /* new: make #main a flex container */
-  justify-content: center;    /* new: center horizontally */
-  padding: 2rem;
-  overflow-y: auto;
-  position: relative;
-}
-
-
-/* Toggle button */
-#toggle-button {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background-color: #202123;
-  color: white;
-  border: none;
-  padding: 0.5rem 0.75rem;
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-#toggle-button:hover {
-  background-color: #333;
-}
-
-.content-wrapper {
-  max-width: 800px;   /* you can adjust this number */
-  width: 100%;
-}
-
-#collapse-button,
-#expand-button {
-    background-color: #202123;
+/* Topline (header bars) */
+.topline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
     color: white;
-    border: none;
-    padding: 0.5rem 0.75rem;
-    font-size: 1.25rem;
+    padding: 10px 15px;
+    height: 50px;
+}
+
+/* Button inside topline */
+.openbtn {
+    font-size: 1.5em;
     cursor: pointer;
+    color: white;
+    line-height: 1;
 }
 
-/* Position buttons */
-#collapse-button {
-    display: block;
-    margin-bottom: 1rem;
+/* Main content area: pushable and scrollable */
+main {
+    flex-grow: 1;
+    overflow-y: auto;
+    transition: margin-left 0.5s, margin-right 0.5s;
+    padding: 70px 1em 1em; /* avoid overlap with topline */
+
+    /* drop the flex centering */
+    /* display: flex; flex-direction: column; align-items: center; text-align: center; */
+    min-height: 0;
 }
 
-#expand-button {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-}
-
-/* Default state: hide expand button when sidebar is open */
-#expand-button {
-    display: none;
-}
-
-/* When sidebar is collapsed: hide collapse button and show expand button */
-#sidebar.collapsed #collapse-button {
-    display: none;
-}
-
-#sidebar.collapsed ~ #main #expand-button {
-    display: block;
-}
-
-
-
-
-
-/* Responsive */
-@media (max-width: 768px) {
-  #sidebar {
-      width: 60px;
-  }
+/* Center the container, but keep its text left-aligned */
+main > * {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    /* text-align: left is default, so no need to set it explicitly */
 }
