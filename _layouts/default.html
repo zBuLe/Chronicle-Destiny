@@ -30,8 +30,14 @@
 
   <script>
     function togglePanel(id) {
-      document.getElementById(id).classList.toggle('collapsed');
+      const panel = document.getElementById(id);
+      panel.classList.toggle('open');
+  
+      if (id === 'left-panel') {
+        document.body.classList.toggle('left-open');
+      }
     }
   </script>
+  
 </body>
 </html>
