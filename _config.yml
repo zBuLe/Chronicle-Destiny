@@ -1,3 +1,10 @@
-title: My Site
-markdown: kramdown
+# Disable any built‑in theme
 theme: null
+
+# Site settings
+title: My Simple Theme
+url: ""        # for GitHub Pages
+baseurl: ""    # if served at root
+
+# Markdown processor (Kramdown by default)
+markdown: kramdown

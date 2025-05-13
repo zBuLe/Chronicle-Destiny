@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script defer src="{{ '/assets/js/script.js' | relative_url }}"></script>
 </head>
 <body>
-  <div id="left-panel" class="side-panel"> <!-- Left Panel -->
-    <button class="toggle-btn" onclick="togglePanel('left-panel')">☰</button>
-    <nav>
-      <!-- Your nav links -->
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
+  <div id="container">
+
+    <nav id="sidebar">
+      <button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+      {% include sidebar.html %}
     </nav>
+
+    <main id="main">
+      {{ content }}
+    </main>
+
+    <aside id="aside">
+      <button id="aside-toggle" aria-label="Toggle info">≡</button>
+      {% include aside.html %}
+    </aside>
+
   </div>
-
-  <main> <!-- Main Content -->
-    {{ content }}
-  </main>
-
-  <div id="right-panel" class="side-panel"> <!-- Right Panel -->
-    <button class="toggle-btn" onclick="togglePanel('right-panel')">☰</button>
-    <div>
-      <!-- Extra info, tools, or anything -->
-      <p>Notes</p>
-    </div>
-  </div>
-
-  <script>
-    function togglePanel(id) {
-      document.getElementById(id).classList.toggle('collapsed');
-    }
-  </script>
 </body>
 </html>
