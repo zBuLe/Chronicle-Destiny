@@ -2,37 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
-  <script defer src="/assets/js/main.js"></script>
 </head>
 <body>
-  <div class="container">
-
-    <!-- LEFT SIDEBAR -->
-    <aside class="sidebar-left" id="sidebar-left">
-      <button class="toggle-button" data-target="sidebar-left">☰</button>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-      {{ content }}
-    </main>
-
-    <!-- RIGHT SIDEBAR -->
-    <aside class="sidebar-right" id="sidebar-right">
-      <button class="toggle-button" data-target="sidebar-right">☰</button>
-      <div id="toc">
-        <h2>Table of Contents</h2>
-      </div>
-    </aside>
-
+  <div id="left-panel" class="side-panel"> <!-- Left Panel -->
+    <button class="toggle-btn" onclick="togglePanel('left-panel')">☰</button>
+    <nav>
+      <!-- Your nav links -->
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+    </nav>
   </div>
+
+  <main> <!-- Main Content -->
+    {{ content }}
+  </main>
+
+  <div id="right-panel" class="side-panel"> <!-- Right Panel -->
+    <button class="toggle-btn" onclick="togglePanel('right-panel')">☰</button>
+    <div>
+      <!-- Extra info, tools, or anything -->
+      <p>Notes</p>
+    </div>
+  </div>
+
+  <script>
+    function togglePanel(id) {
+      document.getElementById(id).classList.toggle('collapsed');
+    }
+  </script>
 </body>
 </html>
