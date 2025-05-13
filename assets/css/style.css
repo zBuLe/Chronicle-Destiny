@@ -84,3 +84,60 @@ body {
   font-size: 1.2rem;
   margin-top: 0;
 }
+/* MOBILE FRIENDLY: Collapse sidebars by default under 768px */
+@media (max-width: 768px) {
+  .sidebar-left, .sidebar-right {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 200px;
+    height: 100%;
+    transform: translateX(-100%);
+  }
+
+  .sidebar-right {
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+  }
+
+  .sidebar-left.collapsed {
+    transform: translateX(-100%);
+  }
+
+  .sidebar-left:not(.collapsed) {
+    transform: translateX(0);
+  }
+
+  .sidebar-right.collapsed {
+    transform: translateX(100%);
+  }
+
+  .sidebar-right:not(.collapsed) {
+    transform: translateX(0);
+  }
+
+  /* Float toggle buttons for mobile */
+  .sidebar-left .toggle-button {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    background: #222;
+  }
+
+  .sidebar-right .toggle-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    background: #eee;
+    color: #333;
+  }
+
+  /* Prevent main content from shifting under fixed sidebars */
+  .main-content {
+    padding: 1rem;
+  }
+}
