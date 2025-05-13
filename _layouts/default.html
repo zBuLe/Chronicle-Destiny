@@ -20,9 +20,12 @@
     </div>
 
     <div id="main">
-        <button id="toggle-button">☰</button>
-        {{ content }}
-    </div>
+      <button id="toggle-button">☰</button>
+      <div class="content-wrapper">
+          {{ content }}
+      </div>
+  </div>
+  
 
     <script>
         document.getElementById("toggle-button").addEventListener("click", function() {
