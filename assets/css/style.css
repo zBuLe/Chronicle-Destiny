@@ -141,6 +141,11 @@ a:hover {
     height: 50px;
 }
 
+.topline span button {
+  margin-left: 0.5em;
+}
+
+
 /* Buttons in topline */
 .openbtn {
     font-size: 1.5em;
