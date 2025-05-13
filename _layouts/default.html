@@ -8,30 +8,41 @@
 </head>
 <body>
 
-    <div id="sidebar">
-        <h2>{{ site.title }}</h2>
-        <ul>
-            {% for page in site.pages %}
-                {% if page.title %}
-                    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
+  <div id="sidebar">
+    <button id="collapse-button">☰</button> <!-- toggle inside panel -->
+    <h2>{{ site.title }}</h2>
+    <ul>
+        {% for page in site.pages %}
+            {% if page.title %}
+                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
 
-    <div id="main">
-      <button id="toggle-button">☰</button>
-      <div class="content-wrapper">
-          {{ content }}
-      </div>
-  </div>
+<div id="main">
+    <button id="expand-button">☰</button> <!-- toggle in main area -->
+    <div class="content-wrapper">
+        {{ content }}
+    </div>
+</div>
+
   
 
-    <script>
-        document.getElementById("toggle-button").addEventListener("click", function() {
-            document.getElementById("sidebar").classList.toggle("collapsed");
-        });
-    </script>
+<script>
+  const sidebar = document.getElementById("sidebar");
+  const collapseButton = document.getElementById("collapse-button");
+  const expandButton = document.getElementById("expand-button");
+
+  collapseButton.addEventListener("click", () => {
+      sidebar.classList.add("collapsed");
+  });
+
+  expandButton.addEventListener("click", () => {
+      sidebar.classList.remove("collapsed");
+  });
+</script>
+
 
 </body>
 </html>

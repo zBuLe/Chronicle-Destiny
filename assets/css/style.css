@@ -81,6 +81,44 @@ body {
   width: 100%;
 }
 
+#collapse-button,
+#expand-button {
+    background-color: #202123;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+/* Position buttons */
+#collapse-button {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#expand-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+/* Default state: hide expand button when sidebar is open */
+#expand-button {
+    display: none;
+}
+
+/* When sidebar is collapsed: hide collapse button and show expand button */
+#sidebar.collapsed #collapse-button {
+    display: none;
+}
+
+#sidebar.collapsed ~ #main #expand-button {
+    display: block;
+}
+
+
+
 
 
 /* Responsive */
