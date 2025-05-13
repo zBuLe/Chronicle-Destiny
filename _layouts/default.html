@@ -4,30 +4,37 @@
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="/css/style.css">
+  <script defer src="/js/main.js"></script>
 </head>
 <body>
   <div class="container">
-    <aside class="sidebar-left">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar-left" id="sidebar-left">
+      <button class="toggle-button" data-target="sidebar-left">☰</button>
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
-          <!-- Add more links -->
+          <!-- more links -->
         </ul>
       </nav>
     </aside>
 
+    <!-- MAIN CONTENT -->
     <main class="main-content">
       {{ content }}
     </main>
 
-    <aside class="sidebar-right">
-      <!-- Maybe inject a TOC here later -->
+    <!-- RIGHT SIDEBAR -->
+    <aside class="sidebar-right" id="sidebar-right">
+      <button class="toggle-button" data-target="sidebar-right">☰</button>
       <div id="toc">
         <h2>Table of Contents</h2>
-        <!-- We'll auto-fill this later with a little JavaScript if you want -->
+        <!-- future TOC -->
       </div>
     </aside>
+
   </div>
 </body>
 </html>

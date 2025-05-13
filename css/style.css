@@ -10,13 +10,45 @@ body {
     min-height: 100vh;
   }
   
+  /* Sidebar base */
   .sidebar-left, .sidebar-right {
     width: 200px;
     background: #222;
     color: #fff;
     padding: 1rem;
+    position: relative;
+    transition: transform 0.3s ease;
   }
   
+  /* Sidebar right has different color */
+  .sidebar-right {
+    background: #eee;
+    color: #333;
+  }
+  
+  /* Toggle buttons */
+  .toggle-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  /* When collapsed, slide off screen */
+  .sidebar-left.collapsed {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar-right.collapsed {
+    transform: translateX(100%);
+  }
+  
+  /* Navigation links */
   .sidebar-left ul {
     list-style: none;
     padding: 0;
@@ -35,20 +67,14 @@ body {
     color: white;
   }
   
+  /* Main content */
   .main-content {
     flex: 1;
     padding: 2rem;
     background: white;
   }
   
-  /* Right Sidebar (TOC) */
-  .sidebar-right {
-    background: #eee;
-    color: #333;
-    padding: 1rem;
-  }
-  
-  /* Basic Table of Contents styling */
+  /* TOC section */
   #toc {
     position: sticky;
     top: 1rem;
