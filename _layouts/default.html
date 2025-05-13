@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{{ page.title | default: site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <script defer src="{{ '/assets/js/script.js' | relative_url }}"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-  <div id="container">
 
-    <nav id="sidebar">
-      <button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
-      {% include sidebar.html %}
+<div class="container">
+  <aside id="left-panel" class="panel left-panel">
+    <!-- Left collapsible navigation -->
+    <button class="collapse-btn" onclick="togglePanel('left')">☰</button>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/page2.html">Page 2</a></li>
+        <!-- Add more links -->
+      </ul>
     </nav>
+  </aside>
 
-    <main id="main">
-      {{ content }}
-    </main>
+  <main id="main-content">
+    {{ content }}
+  </main>
 
-    <aside id="aside">
-      <button id="aside-toggle" aria-label="Toggle info">≡</button>
-      {% include aside.html %}
-    </aside>
+  <aside id="right-panel" class="panel right-panel">
+    <!-- Right collapsible content -->
+    <button class="collapse-btn" onclick="togglePanel('right')">☰</button>
+    <div class="right-content">
+      <!-- Stuff here -->
+    </div>
+  </aside>
+</div>
 
-  </div>
+<script>
+function togglePanel(side) {
+  const panel = document.getElementById(side + '-panel');
+  panel.classList.toggle('collapsed');
+}
+</script>
+
 </body>
 </html>

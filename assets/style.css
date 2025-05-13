@@ -1,0 +1,80 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left panel */
+.left-panel {
+  background: #f0f0f0;
+  width: 250px;
+  transition: width 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ccc;
+}
+.left-panel.collapsed {
+  width: 50px;
+}
+.left-panel nav {
+  flex-grow: 1;
+  padding: 1rem;
+}
+.left-panel nav ul {
+  list-style: none;
+}
+.left-panel nav li {
+  margin-bottom: 1rem;
+}
+.left-panel nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Right panel */
+.right-panel {
+  background: #f0f0f0;
+  width: 250px;
+  transition: width 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ccc;
+}
+.right-panel.collapsed {
+  width: 50px;
+}
+.right-panel .right-content {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+/* Main content */
+#main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Collapse buttons */
+.collapse-btn {
+  background: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
