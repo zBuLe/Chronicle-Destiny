@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+    {% include head.html %}
 </head>
-<body>
+<body data-theme="dark">
 
     {% include header.html %}
-    {% include toc.html %}
-    {% include topline.html %}
-
-    <main id="main">
+    {% include sidebar.html %}
+    <main class="content">
         {{ content }}
     </main>
-
-    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+    {% include rightpanel.html %}
+    {% include scripts.html %}
 </body>
 </html>
