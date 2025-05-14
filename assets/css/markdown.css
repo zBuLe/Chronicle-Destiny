@@ -30,12 +30,12 @@ main p {
 }
 
 main a {
-    color: var(--accent1-color);
+    color: var(--link-color);
     text-decoration: none;
 }
 
 main a:hover {
-    color: var(--accent2-color);
+    color: var(--hover-color);
     text-decoration: underline;
 }
 
