@@ -4,7 +4,7 @@ function hljsDefineGML(hljs) {
     aliases: ['gamemaker', 'gamemakerlanguage'],
     keywords: {
       keyword:
-        'break case continue default do else enum exit for globalvar if repeat return switch until var while with and or not xor',
+        '#macro #region #endregion break case continue default do else enum exit for globalvar if repeat return switch until var while with and or not xor function',
       literal:
         'true false undefined noone self other all global local',
       built_in:
