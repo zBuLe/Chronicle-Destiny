@@ -1,18 +1,34 @@
 :root {
   /* GML Syntax Colors (Dark Mode) */
+  --gml-none:magenta;
   --gml-comment: #5B995B;
-  --gml-number:  #FF8080;
-  --gml-string:  #FFFF00;
+  --gml-value: #FF8080;
+  --gml-string:  #FFFF00;    
+  --gml-obj-var:#B2B1FF;
   --gml-keyword: #FFB871;
-  --gml-operator: #FFB871;
-  --gml-global:  #FFF899;
-  --gml-instance: #B2B1FF;
+  --gml-function: #FFB871;
+  --gml-builtin: #58E55A;
+
   --gml-border:  #039D5B;
-  --gml-header-bg: #039D5B;
   --gml-bg: #222;
+  --gml-text: #C0C0C0;
 }
 
 [data-theme="light"] {
+
+  --gml-comment: #027F00;   /* darker green */
+  --gml-number:  #FF3030;      /* classic red */
+  --gml-string:  #000099;   /* goldenrod */
+  --gml-keyword: #0004F7;   /* darkgoldenrod */
+  --gml-operator: #333333;
+  --gml-global:  #0004F7;   /* softer blue */
+  --gml-instance: #990000;  /* mediumslateblue */
+  --gml-border:  #2AAE96;   /* dark green */
+  --gml-header-bg: #2AAE96;
+  --gml-bg: #E0E0E0;
+  --gml-text: #333333;
+
+
   /* GML Syntax Colors (Light Mode) */
   --gml-comment: #027F00;   /* darker green */
   --gml-number:  #FF3030;      /* classic red */
@@ -27,21 +43,61 @@
   --gml-text: #333333;
 }
 
-/* GML code blocks for Prism */
-pre[class*="language-gml"] {
+/*********************************/
+
+pre.language-gml  {
+  background-color: var(--gml-bg) ;
+  color:var(--gml-text);
     border: 2px solid var(--gml-border);
-    font-family: Consolas, monospace;
 }
 
-main .code-header {
-    background: var(--gml-header-bg);
+pre.language-gml .token.comment { color: var(--gml-comment); }
+pre.language-gml .token.prolog{ color: var(--gml-comment); }
+pre.language-gml .token.doctype { color: var(--gml-comment); }
+pre.language-gml .token.cdata { color: var(--gml-comment); }
+
+pre.language-gml .token.punctuation  { color: var(--gml-text); }
+
+pre.language-gml .token.namespace { color: var(--gml-none); opacity:0.7 }
+
+pre.language-gml .token.property { color: var(--gml-none); }
+pre.language-gml .token.tag { color: var(--gml-none); }
+pre.language-gml .token.boolean { color: var(--gml-none); }
+pre.language-gml .token.number { color: var(--gml-value); }
+pre.language-gml .token.constant { color: var(--gml-obj-var); }
+pre.language-gml .token.symbol { color: var(--gml-none); }
+pre.language-gml .token.deleted { color: var(--gml-none); }
+
+pre.language-gml .token.selector { color: var(--gml-none); }
+pre.language-gml .token.attr-name { color: var(--gml-none); }
+pre.language-gml .token.string { color: var(--gml-string); }
+pre.language-gml .token.char { color: var(--gml-none); }
+pre.language-gml .token.builtin { color: var(--gml-none); }
+pre.language-gml .token.inserted  { color: var(--gml-none); }
+
+pre.language-gml .token.operator  { color: var(--gml-text); }
+pre.language-gml .token.entity  { color: var(--gml-none); }
+pre.language-gml .token.url  { color: var(--gml-none); }
+
+pre.language-gml .token.atrule  { color: var(--gml-none); }
+pre.language-gml .token.attr-value  { color: var(--gml-none); }
+pre.language-gml .token.keyword  { color: var(--gml-keyword);   font-weight: bold; }
+
+pre.language-gml .token.function  { color: var(--gml-function); }
+pre.language-gml .token.class-name  { color: var(--gml-none); }
+
+pre.language-gml .token.regex  { color: var(--gml-none); }
+pre.language-gml .token.important  { color: var(--gml-none); }
+pre.language-gml .token.variable  { color: var(--gml-builtin); }
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
 }
 
-/* Prism token styles */
-.token.comment { color: var(--gml-comment); }
-.token.string  { color: var(--gml-string); }
-.token.keyword { color: var(--gml-keyword); font-weight: bold; }
-.token.number  { color: var(--gml-number); }
-.token.boolean { color: var(--gml-number); }
-.token.operator { color: var(--gml-operator); }
-.token.function { color: var(--gml-global); }
+.token.entity {
+	cursor: help;
+}
