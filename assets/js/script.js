@@ -18,7 +18,7 @@ function toggleTOC() {
   main.style.marginRight = isOpen ? "0" : "250px";
 }
 
-// Dark/light mode toggle
+// Dark mode toggle
 function toggleTheme() {
   const html = document.documentElement;
   if (html.getAttribute('data-theme') === 'dark') {
@@ -30,10 +30,17 @@ function toggleTheme() {
   }
 }
 
-// Restore saved theme on page load
+// On page load: restore user preference or respect system preference
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
+  } else if (savedTheme === 'light') {
+      document.documentElement.removeAttribute('data-theme');
+  } else {
+      // No saved preference → use system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+      }
   }
 });
