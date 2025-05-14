@@ -9,6 +9,9 @@ This page tests Prism's GML syntax highlighting.
 The code does not do anything useful; it's just for style and coverage.
 
 ```gml
+
+#macro TOTAL_WEAPONS 10
+
 /// @description Example GML Syntax Demo
 
 // Single line comment
@@ -26,9 +29,26 @@ function is_same_object(_inst_id, _object_id=noone)
     return _inst_id.object_index == _object_id;
 }
 
+enum ENUM_TEST
+{
+    VAL = 10
+}
+
+enum RAINBOW
+{
+    RED = 5,
+    ORANGE = 5 * 2,
+    YELLOW = 15,
+    GREEN = 20,
+    BLUE = 25,
+    INDIGO = 30,
+    VIOLET = 35 * ENUM_TEST.VAL
+}
 
 var player_speed = 4;
 globalvar global_value;
+
+global.food = 5 ;
 
 if (keyboard_check(vk_right)) {
     x += player_speed;
