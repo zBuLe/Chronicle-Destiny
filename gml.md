@@ -48,6 +48,9 @@ enum RAINBOW
 var player_speed = 4;
 globalvar global_value;
 
+x=5;
+orange="orange"
+
 global.food = 5 ;
 
 if (keyboard_check(vk_right)) {
