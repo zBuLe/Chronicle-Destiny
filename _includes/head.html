@@ -1,3 +1,4 @@
+<!-- head.html -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ page.title | default: site.title }}</title>
@@ -10,6 +11,17 @@
 <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/gml.css' | relative_url }}">
 
-<!-- Prism.js -->
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.min.js"></script>
-<script src="{{ '/assets/js/prism-gml.js' | relative_url }}"></script>
+
+<!-- highlight.js theme (choose any, monokai looks great for code) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+
+<!-- highlight.js core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+<!-- your custom gml language -->
+<script src="{{ '/assets/js/gml.js' | relative_url }}"></script>
+
+<script>
+  hljs.registerLanguage('gml', hljsDefineGML);
+  hljs.highlightAll();
+</script>
