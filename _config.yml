@@ -1,6 +1,6 @@
 title: My Docs Site
-description: My custom Jekyll theme
-baseurl: "" # set when using GitHub Pages
-url: ""     # set when using GitHub Pages
+description: My custom Jekyll theme with Prism
+baseurl: ""
+url: ""
 highlighter: none
 markdown: kramdown

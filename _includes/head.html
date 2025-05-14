@@ -1,22 +1,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ page.title | default: site.title }}</title>
+
+<!-- Font Awesome Kit -->
 <script src="https://kit.fontawesome.com/fe2b0ce82c.js" crossorigin="anonymous"></script>
 
-<!--<link rel="stylesheet" href="{{ '/assets/css/gml.css' | relative_url }}">
--->
-<link href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-gml.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markup.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-css.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-gdscript.min.js"></script>
-
+<!-- Theme Styles -->
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/gml.css' | relative_url }}">
+
+<!-- Prism.js -->
+<link href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.min.js"></script>
+<script src="{{ '/assets/js/prism-gml.js' | relative_url }}"></script>

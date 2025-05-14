@@ -27,62 +27,21 @@
   --gml-text: #333333;
 }
 
-
-/* === GML-STYLED CODE BLOCK (faked via ```java) === */
-.language-java pre {
-  background-color: var(--gml-bg) ;
-  color:var(--gml-text);
+/* GML code blocks for Prism */
+pre[class*="language-gml"] {
     border: 2px solid var(--gml-border);
     font-family: Consolas, monospace;
 }
 
-main .language-java .code-header {
+main .code-header {
     background: var(--gml-header-bg);
 }
 
-/* === Rouge Token Styles for GML Look === */
-
-/* Comments */
-.language-java .highlight .c1 {
-    color: var(--gml-comment);
-}
-
-/* Numbers (integer & float) and constants */
-.language-java .highlight .mi,
-.language-java .highlight .mf,
-.language-java .highlight .kc,
-.language-java .highlight .no,
-.language-java .highlight .nf,
-.language-java .highlight .err {
-    color: var(--gml-number);
-    font-weight: bold;
-}
-
-/* Strings */
-.language-java .highlight .s,
-.language-java .highlight .s2 {
-    color: var(--gml-string);
-    font-weight: bold;
-}
-
-/* Keywords (general and types) */
-.language-java .highlight .k,
-.language-java .highlight .kt {
-    color: var(--gml-keyword);
-    font-weight: bold;
-}
-
-/* Operators */
-.language-java .highlight .o {
-    color: var(--gml-operator);
-}
-
-/* Static/global variables */
-.language-java .highlight .n {
-    color: var(--gml-global);
-}
-
-/* Instance variables / attributes */
-.language-java .highlight .na {
-    color: var(--gml-instance);
-}
+/* Prism token styles */
+.token.comment { color: var(--gml-comment); }
+.token.string  { color: var(--gml-string); }
+.token.keyword { color: var(--gml-keyword); font-weight: bold; }
+.token.number  { color: var(--gml-number); }
+.token.boolean { color: var(--gml-number); }
+.token.operator { color: var(--gml-operator); }
+.token.function { color: var(--gml-global); }
