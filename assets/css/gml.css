@@ -10,6 +10,7 @@
   --gml-keyword: #FFB871;
   --gml-number: #FF8080;
   --gml-string: #FFFF00;
+  --gml-constant: #FF8080;
 
 }
 
@@ -23,6 +24,7 @@
   --gml-keyword: #0ff;
   --gml-number: #0ff;
   --gml-string: #0ff;
+  --gml-string: #0ff;
 
 }
 pre:has(.language-gml)  {
@@ -34,6 +36,8 @@ pre:has(.language-gml)  {
 .language-gml .hljs-keyword { color: var(--gml-keyword); font-weight: bold  }
 .language-gml .hljs-number { color: var(--gml-number);  }
 .language-gml .hljs-string { color: var(--gml-string); }
+.language-gml .hljs-constant { color: var(--gml-constant); }
+
 
 .language-gml .hljs-literal { color: var(--gml-none); }
 .language-gml .hljs-selector-tag { color: var(--gml-none); }
