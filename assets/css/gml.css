@@ -14,17 +14,17 @@
 
 [data-theme="light"] {
   /* GML Syntax Colors (Light Mode) */
-  --gml-comment: #228B22;   /* darker green */
-  --gml-number:  #D14;      /* classic red */
-  --gml-string:  #DAA520;   /* goldenrod */
-  --gml-keyword: #B8860B;   /* darkgoldenrod */
-  --gml-operator: #B8860B;
-  --gml-global:  #5555AA;   /* softer blue */
-  --gml-instance: #7B68EE;  /* mediumslateblue */
-  --gml-border:  #006400;   /* dark green */
-  --gml-header-bg: #fff;
+  --gml-comment: #027F00;   /* darker green */
+  --gml-number:  #FF3030;      /* classic red */
+  --gml-string:  #000099;   /* goldenrod */
+  --gml-keyword: #0004F7;   /* darkgoldenrod */
+  --gml-operator: #333333;
+  --gml-global:  #0004F7;   /* softer blue */
+  --gml-instance: #990000;  /* mediumslateblue */
+  --gml-border:  #2AAE96;   /* dark green */
+  --gml-header-bg: #2AAE96;
   --gml-bg: #E0E0E0;
-  --gml-text: #333;
+  --gml-text: #333333;
 }
 
 

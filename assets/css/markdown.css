@@ -75,8 +75,8 @@ main blockquote {
    Code
    ========================= */
 main .code-header {
-            background-color: #333;
-            color: white;
+            background-color: var(--line-color);
+            color: var(--text-color);
             padding: 0.5em 1em;
             font-family:  var(--mono-font);
             text-align: center;
@@ -87,7 +87,7 @@ main .code-header {
         }
 
 main .code-header button {
-  background-color: var(--bg2-color);
+  background-color: transparent;
   border: none;
   color: var(--text-color);
   padding: 0.5em;
@@ -99,7 +99,7 @@ main .code-header button {
   cursor: pointer;
         }
 main pre{
-    background-color: var(--bg2-color);
+    background-color: var(--bg-color2);
     margin: 0 0 2em 0;
 border: 1px solid var(--line-color);
        padding: 0.5rem 1em;
