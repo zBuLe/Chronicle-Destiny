@@ -78,21 +78,32 @@ Use `git status` to list all new or modified files.
 ### Code blocks
 
 ```java
-// Java example
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-````
+/// @function                is_same_object(inst_id, object_id)
+/// @description             Check if the given instance belongs to the given object.
+/// @param {Id.Instance}     inst_id    The unique instance ID value of the instance to check.
+/// @param {Asset.GMObject}  object_id  The object index to be checked against.
+/// @return {Bool}
 
-```java
-// GML (GameMaker Language) example
 function createEnemy(x, y) {
     var enemy = instance_create_layer(x, y, "Instances", obj_enemy);
     enemy.hp = 100;
     enemy.speed = 4;
-    return enemy;
+    return enemy;// GML (GameMaker Language) example
+}
+````
+
+```java
+/// @function                is_same_object(inst_id, object_id)
+/// @description             Check if the given instance belongs to the given object.
+/// @param {Id.Instance}     inst_id    The unique instance ID value of the instance to check.
+/// @param {Asset.GMObject}  object_id  The object index to be checked against.
+/// @return {Bool}
+
+function createEnemy(x, y) {
+    var enemy = instance_create_layer(x, y, "Instances", obj_enemy);
+    enemy.hp = 100;
+    enemy.speed = 4;
+    return enemy;// GML (GameMaker Language) example
 }
 ```
 
