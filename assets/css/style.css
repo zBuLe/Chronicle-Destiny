@@ -2,6 +2,9 @@
    Variable Themes
    ====================== */
    :root {
+    --panel-left: 0px;
+    --panel-right: 0px;
+
     --text-font: 'Calibri', Tahoma, Geneva, Verdana, sans-serif;
     --mono-font: Consolas, 'Courier New', Courier, monospace;
 
@@ -176,11 +179,10 @@ header nav, aside div {
 
 /* Main content area: pushable and scrollable */
 main {
-    flex-grow: 1;
-    overflow-y: auto;
-    transition: margin-left 0.5s, margin-right 0.5s;
-    padding: 4em 1em 1em; /* spacing for fixed topline */
-    min-height: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 4em calc(1em + var(--panel-right, 0px)) 1em calc(1em + var(--panel-left, 0px));
+  min-height: 0;
 }
 
 /* Content container inside main */
