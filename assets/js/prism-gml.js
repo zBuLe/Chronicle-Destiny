@@ -14,3 +14,4 @@ Prism.languages.gml = {
     'punctuation': /[{}[\];(),.:]/,
     'function': /\b[a-zA-Z_]\w*(?=\s*\()/
 };
+
