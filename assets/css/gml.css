@@ -8,6 +8,8 @@
   
   --gml-comment: #5B995B;
   --gml-keyword: #FFB871;
+  --gml-number: #FF8080;
+  --gml-string: #FFFF00;
 
 }
 
@@ -18,7 +20,9 @@
   --gml-accent: #2AAE96;
   
   --gml-comment: #027F00;  
-  --gml-keyword: #00f;
+  --gml-keyword: #0ff;
+  --gml-number: #0ff;
+  --gml-string: #0ff;
 
 }
 pre:has(.language-gml)  {
@@ -28,6 +32,9 @@ pre:has(.language-gml)  {
 }
 
 .language-gml .hljs-keyword { color: var(--gml-keyword); font-weight: bold  }
+.language-gml .hljs-number { color: var(--gml-number);  }
+.language-gml .hljs-string { color: var(--gml-string); }
+
 .language-gml .hljs-literal { color: var(--gml-none); }
 .language-gml .hljs-selector-tag { color: var(--gml-none); }
 .language-gml .hljs-strong { color: var(--gml-none); }
@@ -50,7 +57,7 @@ pre:has(.language-gml)  {
 .language-gml .hljs-section { color: var(--gml-none); }
 .language-gml .hljs-selector-attr { color: var(--gml-none); }
 .language-gml .hljs-selector-pseudo { color: var(--gml-none); }
-.language-gml .hljs-string { color: var(--gml-none); }
+
 .language-gml .hljs-subst { color: var(--gml-none); }
 .language-gml .hljs-template-tag { color: var(--gml-none); }
 .language-gml .hljs-template-variable { color: var(--gml-none); }
