@@ -86,7 +86,7 @@ public class HelloWorld {
 }
 ````
 
-```gml
+```java
 // GML (GameMaker Language) example
 function createEnemy(x, y) {
     var enemy = instance_create_layer(x, y, "Instances", obj_enemy);

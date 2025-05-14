@@ -1,19 +1,50 @@
+:root {
+  /* GML Syntax Colors (Dark Mode) */
+  --gml-comment: #5B995B;
+  --gml-number:  #FF8080;
+  --gml-string:  #FFFF00;
+  --gml-keyword: #FFB871;
+  --gml-operator: #FFB871;
+  --gml-global:  #FFF899;
+  --gml-instance: #B2B1FF;
+  --gml-border:  #039D5B;
+  --gml-header-bg: #039D5B;
+  --gml-bg: E0E0E0;
+}
+
+[data-theme="light"] {
+  /* GML Syntax Colors (Light Mode) */
+  --gml-comment: #228B22;   /* darker green */
+  --gml-number:  #D14;      /* classic red */
+  --gml-string:  #DAA520;   /* goldenrod */
+  --gml-keyword: #B8860B;   /* darkgoldenrod */
+  --gml-operator: #B8860B;
+  --gml-global:  #5555AA;   /* softer blue */
+  --gml-instance: #7B68EE;  /* mediumslateblue */
+  --gml-border:  #006400;   /* dark green */
+  --gml-header-bg: #fff;
+  --gml-bg: #E0E0E0;
+  --gml-text: #333;
+}
+
+
 /* === GML-STYLED CODE BLOCK (faked via ```java) === */
 .language-java pre {
-
-  border: 2px solid #039D5B;
-  font-family: Consolas, monospace;
+  background-color: var(--gml-bg) ;
+  color:var(--gml-text);
+    border: 2px solid var(--gml-border);
+    font-family: Consolas, monospace;
 }
 
 main .language-java .code-header {
-  background: #039D5B;
+    background: var(--gml-header-bg);
 }
 
 /* === Rouge Token Styles for GML Look === */
 
 /* Comments */
 .language-java .highlight .c1 {
-  color: #5B995B;
+    color: var(--gml-comment);
 }
 
 /* Numbers (integer & float) and constants */
@@ -23,35 +54,35 @@ main .language-java .code-header {
 .language-java .highlight .no,
 .language-java .highlight .nf,
 .language-java .highlight .err {
-  color: #FF8080;
-  font-weight: bold;
+    color: var(--gml-number);
+    font-weight: bold;
 }
 
 /* Strings */
 .language-java .highlight .s,
 .language-java .highlight .s2 {
-  color: #FFFF00;
-  font-weight: bold;
+    color: var(--gml-string);
+    font-weight: bold;
 }
 
 /* Keywords (general and types) */
 .language-java .highlight .k,
 .language-java .highlight .kt {
-  color: #FFB871;
-  font-weight: bold;
+    color: var(--gml-keyword);
+    font-weight: bold;
 }
 
 /* Operators */
 .language-java .highlight .o {
-  color: #FFB871;
+    color: var(--gml-operator);
 }
 
 /* Static/global variables */
 .language-java .highlight .n {
-  color: #FFF899;
+    color: var(--gml-global);
 }
 
 /* Instance variables / attributes */
 .language-java .highlight .na {
-  color: #B2B1FF;
+    color: var(--gml-instance);
 }
