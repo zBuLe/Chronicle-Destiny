@@ -9,7 +9,6 @@ This page tests Prism's GML syntax highlighting.
 The code does not do anything useful; it's just for style and coverage.
 
 ```gml
-
 #macro TOTAL_WEAPONS 10
 
 /// @description Example GML Syntax Demo
@@ -100,4 +99,24 @@ z = x ** 2;
 var big_num = 1234567890;
 var hex_num = 0x1A3F;
 var float_num = 3.14159e-2;
+
+#macro arara 1232 
+
+#region
+lass=$abcd
+kass=0b0010
+
+$2c8edd == #dd8e2c
+#endregion
+
+var test = @"This string has
+line breaks
+over multiple
+lines
+";
+
+var _world = "Earth";
+var _template = $"Hello {_world}!";
+
+
 ```

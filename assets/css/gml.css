@@ -7,6 +7,7 @@
   --gml-accent: #039D5B;
   
   --gml-comment: #5B995B;
+  --gml-keyword: #FFB871;
 
 }
 
@@ -16,7 +17,8 @@
   --gml-bg: #E0E0E0;
   --gml-accent: #2AAE96;
   
-  --gml-comment: #027F00;   /* darker green */
+  --gml-comment: #027F00;  
+  --gml-keyword: #00f;
 
 }
 pre:has(.language-gml)  {
@@ -25,7 +27,7 @@ pre:has(.language-gml)  {
   border: 2px solid var(--gml-accent);
 }
 
-.language-gml .hljs-keyword { color: var(--gml-none); }
+.language-gml .hljs-keyword { color: var(--gml-keyword); font-weight: bold  }
 .language-gml .hljs-literal { color: var(--gml-none); }
 .language-gml .hljs-selector-tag { color: var(--gml-none); }
 .language-gml .hljs-strong { color: var(--gml-none); }
@@ -67,7 +69,6 @@ pre:has(.language-gml)  {
 
 
 .language-gml .hljs-doctag { color: var(--gml-none); }
-.language-gml .hljs-keyword { color: var(--gml-none); }
 .language-gml .hljs-literal { color: var(--gml-none); }
 .language-gml .hljs-section { color: var(--gml-none); }
 .language-gml .hljs-selector-id { color: var(--gml-none); }

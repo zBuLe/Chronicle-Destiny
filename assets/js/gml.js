@@ -1,4 +1,25 @@
 function hljsDefineGML(hljs) {
+  const gmlNumberMode = {
+    className: 'number',
+    variants: [
+      { begin: /\b0b[01]+/i },                                   // binary
+      { begin: /\b0x[\da-f]+/i },                               // hex
+      { begin: /\$[0-9a-f]+/i },                                // color hex with $
+      { begin: /#[0-9a-f]{6}\b/i },                             // color hex with #
+      { begin: /-?\b\d+(\.\d+)?([eE][-+]?\d+)?/ }               // decimal + float + scientific
+    ],
+    relevance: 0
+  };
+
+  const gmlStringMode = {
+    className: 'string',
+    variants: [
+      { begin: /@"/, end: /"/, contains: [] },                 // multiline string @" ... "
+      { begin: /\$"/, end: /"/, contains: [] },                // template string $" ... "
+      hljs.QUOTE_STRING_MODE                                   // normal "text"
+    ]
+  };
+
   return {
     name: 'GML',
     aliases: ['gamemaker', 'gamemakerlanguage'],
@@ -11,22 +32,16 @@ function hljsDefineGML(hljs) {
         'show_message show_debug_message instance_create_layer instance_destroy keyboard_check keyboard_check_pressed'
     },
     contains: [
-      // Single line comments //
-      hljs.C_LINE_COMMENT_MODE,
-      // Multi-line comments /* ... */
-      hljs.C_BLOCK_COMMENT_MODE,
-      // Doc comments (/// ...)
+      hljs.C_LINE_COMMENT_MODE,                                // // comments
+      hljs.C_BLOCK_COMMENT_MODE,                               // /* ... */
       {
-        className: 'doctag',
+        className: 'doctag',                                   // /// doc-comments
         begin: '///',
         end: '$',
         relevance: 10
       },
-      // Strings "..." or '...'
-      hljs.QUOTE_STRING_MODE,
-      hljs.APOS_STRING_MODE,
-      // Numbers (decimal, hex)
-      hljs.C_NUMBER_MODE
+      gmlStringMode,                                           // strings
+      gmlNumberMode                                            // numbers
     ]
   };
 }
