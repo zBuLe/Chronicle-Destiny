@@ -1,0 +1,191 @@
+/* =========================
+   Markdown Styles (final version)
+   ========================= */
+
+   main h1, main h2, main h3, main h4, main h5, main h6 {
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--line-color);
+}
+
+main h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--line-color);
+
+}
+
+main h3 { font-size: 1.6rem; }
+main h4 { font-size: 1.3rem; }
+main h5 { font-size: 1.1rem; }
+main h6 { font-size: 1rem; color: var(--text2-color); }
+
+main p {
+    margin: 1rem 0;
+}
+
+main a {
+    color: var(--accent1-color);
+    text-decoration: none;
+}
+
+main a:hover {
+    color: var(--accent2-color);
+    text-decoration: underline;
+}
+
+/* =========================
+   Lists
+   ========================= */
+main ul, main ol {
+    padding-left: 1rem;
+    
+}
+
+main ul ul, main ol ol {
+    
+}
+
+main .task-list {
+    list-style: none;
+    padding-left: 1em;
+}
+
+main .task-list-item input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+/* =========================
+   Blockquotes
+   ========================= */
+main blockquote {
+    border-left: 4px solid var(--line-color);
+    padding-left: 1rem;
+    color: var(--text2-color);
+    background: var(--bg2-color);
+    margin: 1.5rem 0;
+}
+
+/* =========================
+   Code
+   ========================= */
+main .code-header {
+            background-color: #333;
+            color: white;
+            padding: 0.5em 1em;
+            font-family:  var(--mono-font);
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+      font-size: 0.9em;
+        }
+
+main .code-header button {
+  background-color: var(--bg2-color);
+  border: none;
+  color: var(--text-color);
+  padding: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.7em;
+  margin: 0em;
+  cursor: pointer;
+        }
+main pre{
+    background-color: var(--bg2-color);
+    margin: 0 0 2em 0;
+border: 1px solid var(--line-color);
+       padding: 0.5rem 1em;
+    overflow-x: auto;
+    font-family:  var(--mono-font)
+}
+main code {
+    font-family:  var(--mono-font)
+}
+
+/* =========================
+   Horizontal Rule
+   ========================= */
+main hr {
+    border: none;
+    border-top: 1px solid var(--line-color);
+    margin: 2rem 0;
+}
+
+/* =========================
+   Tables (
+   ========================= */
+
+main table {
+    border: 1px solid var(--line-color);      /* outer border only */
+    border-collapse: collapse;
+    margin: 1rem auto;
+    font-size: 1em;
+}
+
+main th {
+    border-bottom: 1px solid var(--line-color); /* header underline */
+    background-color: var(--text-color);        /* your current dark header style */
+    color: var(--bg-color);
+    font-weight: bold;
+    text-align: left;
+    padding: 0.5rem;
+}
+
+main td {
+    padding: 0.5rem;
+}
+
+main td + td {
+    border-left: 1px solid var(--line-color);   /* column separators only */
+}
+
+/* Striped rows for readability */
+main tbody tr:nth-child(odd) {
+    background-color: var(--bg-color);
+}
+
+main tbody tr:nth-child(even) {
+    background-color: var(--bg2-color);
+}
+
+/* =========================
+   Images
+   ========================= */
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* =========================
+   Footnotes
+   ========================= */
+main sup {
+    font-size: 0.8rem;
+}
+
+main .footnotes {
+    font-size: 0.9rem;
+    color: var(--text2-color);
+}
+
+/* =========================
+   Definition Lists
+   ========================= */
+main dl dt {
+    font-weight: bold;
+}
+
+main dl dd {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
