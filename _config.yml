@@ -1,4 +1,4 @@
-title: My Custom Theme
-description: A simple GitHub Pages site with a collapsible sidebar
-markdown: kramdown
-theme: null
+title: My Docs Site
+description: My custom Jekyll theme
+baseurl: "" # set when using GitHub Pages
+url: ""     # set when using GitHub Pages

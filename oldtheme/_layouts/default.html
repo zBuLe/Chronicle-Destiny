@@ -1,32 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Development site for Chronicle Destiny, a GameMaker-based narrative RPG.">
-  <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/gml.css' | relative_url }}">
-  <script src="https://kit.fontawesome.com/fe2b0ce82c.js" crossorigin="anonymous"></script>
+    {% include head.html %}
 </head>
-<body>
-  <header class="site-header">
+<body data-theme="dark">
+
     {% include header.html %}
-  </header>
-
-  <main>
-    {{ content }}
-  </main>
-
-  <footer class="site-footer">
-    {% include footer.html %}
-  </footer>
-
-  <!-- Code block title bar & copy button -->
-  <script src="{{ '/assets/js/code-titlebar.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
-
+    {% include sidebar.html %}
+    <main class="content">
+        {{ content }}
+    </main>
+    {% include rightpanel.html %}
+    {% include scripts.html %}
 </body>
 </html>
