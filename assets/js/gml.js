@@ -56,21 +56,21 @@ function hljsDefineGML(hljs) {
   };
 
   const gmlEnumMode = {
-    className: 'enum',
     beginKeywords: 'enum',
     end: /[{;]/,
     excludeEnd: true,
     contains: [
-      hljs.inherit(hljs.TITLE_MODE, { begin: /\b[A-Za-z_]\w*\b/ })
+      {
+        className: 'enum',
+        begin: /\b[A-Za-z_]\w*\b/
+      }
     ]
   };
 
   const gmlEnumEntryMode = {
     className: 'enumentry',
     variants: [
-      // enum declaration members
       { begin: /\b[A-Za-z_]\w*(?=\s*=)/ },
-      // enum usage: .VALUE
       { begin: /\.\s*\b[A-Za-z_]\w*\b/ }
     ]
   };
