@@ -52,23 +52,23 @@ modeToggle.addEventListener('click', () => {
     modeToggle.textContent = newTheme === 'light' ? '☀️' : '🌙';
 });
 
-// === Code block headers + copy button ===
-document.querySelectorAll('div[class*="language-"]').forEach(function(codeBlock) {
+// === Code block headers + copy button for highlight.js ===
+document.querySelectorAll('pre code[class*="language-"]').forEach(function(codeElement) {
+    const preBlock = codeElement.parentElement;
+
     const headerDiv = document.createElement('div');
     headerDiv.className = 'code-header';
 
-    let languageClass = Array.from(codeBlock.classList).find(cls => cls.startsWith('language-'));
+    let languageClass = Array.from(codeElement.classList).find(cls => cls.startsWith('language-'));
     let language = languageClass ? languageClass.replace('language-', '').toUpperCase() : '';
-    if (language === 'JAVA') language = 'GML';
+
     headerDiv.textContent = language;
+    headerDiv.setAttribute('data-language', language.toLowerCase());  // ✅ NEW LINE
 
     const copyButton = document.createElement('button');
     copyButton.innerHTML = '<i class="fas fa-clipboard"></i>';
 
     copyButton.addEventListener('click', function() {
-        const codeElement = codeBlock.querySelector('pre code');
-        if (!codeElement) return;
-
         let code = codeElement.textContent;
         let cleanedCode = code.replace(/^ {16}/gm, '').replace(/^\n/, '');
 
@@ -81,5 +81,5 @@ document.querySelectorAll('div[class*="language-"]').forEach(function(codeBlock)
     });
 
     headerDiv.appendChild(copyButton);
-    codeBlock.insertBefore(headerDiv, codeBlock.firstChild);
+    preBlock.parentNode.insertBefore(headerDiv, preBlock);
 });

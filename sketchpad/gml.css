@@ -58,6 +58,8 @@ pre:has(.language-gml)  {
   border: 2px solid var(--gml-accent);
 }
 
+.code-header[data-language="gml"] { background: var(--gml-accent); }
+
 .language-gml .hljs-comment { color: var(--gml-comment); }
 .language-gml .hljs-keyword { color: var(--gml-keyword); font-weight: bold  }
 .language-gml .hljs-number { color: var(--gml-number);  }
