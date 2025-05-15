@@ -23,11 +23,8 @@ function hljsDefineGML(hljs) {
   const gmlConstantMode = {
     className: 'constant',
     variants: [
-      // Core constants
       { begin: /\b(?:true|false|undefined|noone|self|other|all|global|pi|GM_version)\b/ },
-      // Keyboard constants
       { begin: /\b(?:vk_left|vk_right|vk_up|vk_down|vk_home|vk_end|vk_pageup|vk_pagedown|vk_space)\b/ },
-      // Color constants
       { begin: /\b(?:c_red|c_blue|c_white|c_black|c_silver|c_lime|c_maroon|c_olive|c_navy)\b/ }
     ]
   };
@@ -35,10 +32,28 @@ function hljsDefineGML(hljs) {
   const gmlBuiltinVariableMode = {
     className: 'built_in',
     variants: [
-      // Instance variables
       { begin: /\b(?:x|y|object_index|image_index|speed|direction|gravity|friction|hspeed|vspeed|mask_index|path_index|path_position|path_speed|path_scale)\b/ },
-      // Argument variables
       { begin: /\b(?:argument0|argument1|argument2|argument3|argument4|argument5|argument6|argument7|argument8|argument9)\b/ }
+    ]
+  };
+
+  const gmlFunctionMode = {
+    className: 'function',
+    variants: [
+      // user-defined functions: function NAME(
+      {
+        beginKeywords: 'function',
+        end: /\(/,
+        excludeEnd: true,
+        contains: [
+          hljs.inherit(hljs.TITLE_MODE, { begin: /[A-Za-z_]\w*/ })
+        ]
+      },
+      // built-in functions: KEYWORD(
+      {
+        begin: /\b(?:keyboard_check|show_debug_message|show_message|instance_create_layer|instance_destroy|irandom_range)\b(?=\s*\()/,
+        relevance: 0
+      }
     ]
   };
 
@@ -48,22 +63,23 @@ function hljsDefineGML(hljs) {
     keywords: {
       keyword:
         '#macro #region #endregion break case continue default do else enum exit for globalvar if repeat return switch until var while with and or not xor function',
-      built_in:
-        'show_message show_debug_message instance_create_layer instance_destroy keyboard_check keyboard_check_pressed'
+      literal:
+        'true false undefined noone self other all global local'
     },
     contains: [
-      hljs.C_LINE_COMMENT_MODE,
-      hljs.C_BLOCK_COMMENT_MODE,
+      hljs.C_LINE_COMMENT_MODE,    // // comments
+      hljs.C_BLOCK_COMMENT_MODE,   // /* ... */
       {
-        className: 'doctag',
+        className: 'doctag',       // /// doc-comments
         begin: '///',
         end: '$',
         relevance: 10
       },
-      gmlStringMode,
-      gmlNumberMode,
-      gmlConstantMode,
-      gmlBuiltinVariableMode
+      gmlStringMode,               // strings
+      gmlNumberMode,               // numbers
+      gmlConstantMode,             // constants
+      gmlBuiltinVariableMode,      // instance & argument vars
+      gmlFunctionMode              // functions (built-in & user)
     ]
   };
 }

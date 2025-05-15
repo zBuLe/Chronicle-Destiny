@@ -11,6 +11,9 @@
   --gml-number: #FF8080;
   --gml-string: #FFFF00;
   --gml-constant: #FF8080;
+  --gml-builtin: #58E55A;
+  --gml-function: #F2F;
+
 
 }
 
@@ -21,10 +24,12 @@
   --gml-accent: #2AAE96;
   
   --gml-comment: #027F00;  
-  --gml-keyword: #0ff;
-  --gml-number: #0ff;
-  --gml-string: #0ff;
-  --gml-string: #0ff;
+  --gml-keyword: #080;
+  --gml-number: #080;
+  --gml-string: #080;
+  --gml-constant: #080;
+  --gml-builtin: #080;
+  --gml-function: #080;
 
 }
 pre:has(.language-gml)  {
@@ -37,6 +42,9 @@ pre:has(.language-gml)  {
 .language-gml .hljs-number { color: var(--gml-number);  }
 .language-gml .hljs-string { color: var(--gml-string); }
 .language-gml .hljs-constant { color: var(--gml-constant); }
+.language-gml .hljs-built_in { color: var(--gml-builtin); }
+.language-gml .hljs-function { color: var(--gml-function); font-weight: bold  }
+
 
 
 .language-gml .hljs-literal { color: var(--gml-none); }
@@ -55,7 +63,7 @@ pre:has(.language-gml)  {
 
 
 .language-gml .hljs-addition { color: var(--gml-none); }
-.language-gml .hljs-built_in { color: var(--gml-none); }
+
 .language-gml .hljs-bullet { color: var(--gml-none); }
 .language-gml .hljs-emphasis { color: var(--gml-none); }
 .language-gml .hljs-section { color: var(--gml-none); }
