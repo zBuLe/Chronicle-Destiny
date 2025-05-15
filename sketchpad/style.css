@@ -41,6 +41,10 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 p { text-wrap: pretty; }
 h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
 
+html {
+    font-size: 12px; /* Now 1em = 18px for the root element */
+}
+
 
 /* =========================
    Global Link Styles

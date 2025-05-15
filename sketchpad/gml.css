@@ -12,9 +12,18 @@
   --gml-string: #FFFF00;
   --gml-constant: #FF8080;
   --gml-builtin: #58E55A;
-  --gml-function: #F2F;
-
-
+  --gml-function: #FFB871;
+  --gml-global: #FF7EFF;  
+  --gml-enum: #FF8080;
+  --gml-enum-entry: #FF8080;
+  --gml-local: #FFF899;  
+  --gml-static: #FFF899;
+  --gml-braces: #FFB871;
+  --gml-resource: #FF8080;
+  --gml-script: #FFB871;
+  --gml-operator: #C0C0C0;
+  --gml-objectvar: #B2B1FF;
+  --gml-macro: #FF5B5B;
 }
 
 [data-theme="light"] {
@@ -24,75 +33,47 @@
   --gml-accent: #2AAE96;
   
   --gml-comment: #027F00;  
-  --gml-keyword: #080;
-  --gml-number: #080;
-  --gml-string: #080;
-  --gml-constant: #080;
-  --gml-builtin: #080;
-  --gml-function: #080;
-
+  --gml-keyword: #0004F7;
+  --gml-number: #FF3030;
+  --gml-string: #000099;
+  --gml-constant: #7F4C4C;
+  --gml-builtin: #B20000;
+  --gml-function: #990000;
+  --gml-global: #113C77;  
+  --gml-enum: #B26B6B;
+  --gml-enum-entry: #995B5B;
+  --gml-local: #4C4CFF;  
+  --gml-static: #4C4CFF;
+  --gml-braces: #0004F7;
+  --gml-resource: #CC7A7A;
+  --gml-script: #BF0000;
+  --gml-operator: #333333;
+  --gml-objectvar: #58587F;
+  --gml-macro: #B20000;
 }
+
 pre:has(.language-gml)  {
   background-color: var(--gml-bg);
   color:var(--gml-text);
   border: 2px solid var(--gml-accent);
 }
 
+.language-gml .hljs-comment { color: var(--gml-comment); }
 .language-gml .hljs-keyword { color: var(--gml-keyword); font-weight: bold  }
 .language-gml .hljs-number { color: var(--gml-number);  }
 .language-gml .hljs-string { color: var(--gml-string); }
 .language-gml .hljs-constant { color: var(--gml-constant); }
 .language-gml .hljs-built_in { color: var(--gml-builtin); }
-.language-gml .hljs-function { color: var(--gml-function); font-weight: bold  }
-
-
-
-.language-gml .hljs-literal { color: var(--gml-none); }
-.language-gml .hljs-selector-tag { color: var(--gml-none); }
-.language-gml .hljs-strong { color: var(--gml-none); }
-.language-gml .hljs-tag  { color: var(--gml-none); }
-
-
-.language-gml .hljs-code { color: var(--gml-none); }
-
-
-.language-gml .hljs-attribute { color: var(--gml-none); }
-.language-gml .hljs-link { color: var(--gml-none); }
-.language-gml .hljs-regexp { color: var(--gml-none); }
-.language-gml .hljs-symbol { color: var(--gml-none); }
-
-
-.language-gml .hljs-addition { color: var(--gml-none); }
-
-.language-gml .hljs-bullet { color: var(--gml-none); }
-.language-gml .hljs-emphasis { color: var(--gml-none); }
-.language-gml .hljs-section { color: var(--gml-none); }
-.language-gml .hljs-selector-attr { color: var(--gml-none); }
-.language-gml .hljs-selector-pseudo { color: var(--gml-none); }
-
-.language-gml .hljs-subst { color: var(--gml-none); }
-.language-gml .hljs-template-tag { color: var(--gml-none); }
-.language-gml .hljs-template-variable { color: var(--gml-none); }
-.language-gml .hljs-title { color: var(--gml-none); }
-.language-gml .hljs-type { color: var(--gml-none); }
-.language-gml .hljs-variable { color: var(--gml-none); }
-
-
-.language-gml .hljs-class .hljs-title { color: var(--gml-none); }
-.language-gml .hljs-title.class_ { color: var(--gml-none); }
-
-.language-gml .hljs-comment { color: var(--gml-comment); }
-.language-gml .hljs-deletion { color: var(--gml-none); }
-.language-gml .hljs-meta { color: var(--gml-none); }
-.language-gml .hljs-quote { color: var(--gml-none); }
-
-
-.language-gml .hljs-doctag { color: var(--gml-none); }
-.language-gml .hljs-literal { color: var(--gml-none); }
-.language-gml .hljs-section { color: var(--gml-none); }
-.language-gml .hljs-selector-id { color: var(--gml-none); }
-.language-gml .hljs-selector-tag { color: var(--gml-none); }
-.language-gml .hljs-title { color: var(--gml-none); }
-.language-gml .hljs-type  { color: var(--gml-none); }
-
-
+.language-gml .hljs-function { color: var(--gml-function); }
+.language-gml .hljs-title { color: var(--gml-function); }
+.language-gml .hljs-global { color: var(--gml-global); }
+.language-gml .hljs-enum { color: var(--gml-enum); }
+.language-gml .hljs-enumentry { color: var(--gml-enum-entry); }
+.language-gml .hljs-local { color: var(--gml-local);}
+.language-gml .hljs-static { color: var(--gml-static); }
+.language-gml .hljs-symbol { color: var(--gml-braces); font-weight: bold;}
+.language-gml .hljs-resource { color: var(--gml-resource); }
+.language-gml .hljs-scriptname { color: var(--gml-script);}
+.language-gml .hljs-operator { color: var(--gml-operator); font-weight: bold; }
+.language-gml .hljs-objectvar { color: var(--gml-objectvar); }
+.language-gml .hljs-macro { color: var(--gml-macro); }
