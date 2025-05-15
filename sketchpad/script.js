@@ -52,9 +52,13 @@ modeToggle.addEventListener('click', () => {
     modeToggle.textContent = newTheme === 'light' ? '☀️' : '🌙';
 });
 
-// === Code block headers + copy button for highlight.js ===
-document.querySelectorAll('pre code[class*="language-"]').forEach(function(codeElement) {
-    const preBlock = codeElement.parentElement;
+// === Code block headers + copy button (universal: highlight.js + Rouge) ===
+document.querySelectorAll(
+    'pre code[class*="language-"], div[class*="language-"] > div.highlight > pre > code'
+).forEach(function(codeElement) {
+    // Handle both formats
+    let preBlock = codeElement.closest('pre');
+    if (!preBlock) return;
 
     const headerDiv = document.createElement('div');
     headerDiv.className = 'code-header';
@@ -63,7 +67,7 @@ document.querySelectorAll('pre code[class*="language-"]').forEach(function(codeE
     let language = languageClass ? languageClass.replace('language-', '').toUpperCase() : '';
 
     headerDiv.textContent = language;
-    headerDiv.setAttribute('data-language', language.toLowerCase());  // ✅ NEW LINE
+    headerDiv.setAttribute('data-language', language.toLowerCase());
 
     const copyButton = document.createElement('button');
     copyButton.innerHTML = '<i class="fas fa-clipboard"></i>';
