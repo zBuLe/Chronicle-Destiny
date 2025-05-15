@@ -41,6 +41,21 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 p { text-wrap: pretty; }
 h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
 
+
+/* =========================
+   Global Link Styles
+   ========================= */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+
+
 /* =========================
    Topbar with page title
    ========================= */

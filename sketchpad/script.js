@@ -51,3 +51,35 @@ modeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme);
     modeToggle.textContent = newTheme === 'light' ? '☀️' : '🌙';
 });
+
+// === Code block headers + copy button ===
+document.querySelectorAll('div[class*="language-"]').forEach(function(codeBlock) {
+    const headerDiv = document.createElement('div');
+    headerDiv.className = 'code-header';
+
+    let languageClass = Array.from(codeBlock.classList).find(cls => cls.startsWith('language-'));
+    let language = languageClass ? languageClass.replace('language-', '').toUpperCase() : '';
+    if (language === 'JAVA') language = 'GML';
+    headerDiv.textContent = language;
+
+    const copyButton = document.createElement('button');
+    copyButton.innerHTML = '<i class="fas fa-clipboard"></i>';
+
+    copyButton.addEventListener('click', function() {
+        const codeElement = codeBlock.querySelector('pre code');
+        if (!codeElement) return;
+
+        let code = codeElement.textContent;
+        let cleanedCode = code.replace(/^ {16}/gm, '').replace(/^\n/, '');
+
+        navigator.clipboard.writeText(cleanedCode.trim()).then(function() {
+            copyButton.innerHTML = '<i class="fas fa-check"></i>';
+            setTimeout(() => copyButton.innerHTML = '<i class="fas fa-clipboard"></i>', 500);
+        }).catch(function(err) {
+            alert('Failed to copy code: ' + err);
+        });
+    });
+
+    headerDiv.appendChild(copyButton);
+    codeBlock.insertBefore(headerDiv, codeBlock.firstChild);
+});
