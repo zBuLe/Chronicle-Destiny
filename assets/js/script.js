@@ -56,16 +56,22 @@ modeToggle.addEventListener('click', () => {
 document.querySelectorAll(
     'pre code[class*="language-"], div[class*="language-"] > div.highlight > pre > code'
 ).forEach(function(codeElement) {
-    // Handle both formats
     let preBlock = codeElement.closest('pre');
     if (!preBlock) return;
 
     const headerDiv = document.createElement('div');
     headerDiv.className = 'code-header';
 
+    // ✅ universal language detection
     let languageClass = Array.from(codeElement.classList).find(cls => cls.startsWith('language-'));
-    let language = languageClass ? languageClass.replace('language-', '').toUpperCase() : '';
+    if (!languageClass) {
+        const wrapperDiv = codeElement.closest('div[class*="language-"]');
+        if (wrapperDiv) {
+            languageClass = Array.from(wrapperDiv.classList).find(cls => cls.startsWith('language-'));
+        }
+    }
 
+    let language = languageClass ? languageClass.replace('language-', '').toUpperCase() : '';
     headerDiv.textContent = language;
     headerDiv.setAttribute('data-language', language.toLowerCase());
 
@@ -76,7 +82,7 @@ document.querySelectorAll(
         let code = codeElement.textContent;
         let cleanedCode = code.replace(/^ {16}/gm, '').replace(/^\n/, '');
 
-        navigator.clipboard.writeText(cleanedCode.trim()).then(function() {
+        navigator.clipboard.writeText(code.trim()).then(function() {
             copyButton.innerHTML = '<i class="fas fa-check"></i>';
             setTimeout(() => copyButton.innerHTML = '<i class="fas fa-clipboard"></i>', 500);
         }).catch(function(err) {
