@@ -1,11 +1,11 @@
 title: My Docs Site
 description: A documentation theme
 nav:
-  - title: Home
+  - title: Alpha
     url: /
-  - title: Getting Started
-    url: /getting-started/
-  - title: Examples
-    url: /examples/
-  - title: API Reference
-    url: /api/
+  - title: GDD
+    url: /gdd/
+  - title: Devlog
+    url: /devlog
+  - title: Roadmap
+    url: /roadmap
