@@ -40,7 +40,6 @@ function hljsDefineGML(hljs) {
   const gmlFunctionMode = {
     className: 'function',
     variants: [
-      // user-defined functions: function NAME(
       {
         beginKeywords: 'function',
         end: /\(/,
@@ -49,11 +48,30 @@ function hljsDefineGML(hljs) {
           hljs.inherit(hljs.TITLE_MODE, { begin: /[A-Za-z_]\w*/ })
         ]
       },
-      // built-in functions: KEYWORD(
       {
         begin: /\b(?:keyboard_check|show_debug_message|show_message|instance_create_layer|instance_destroy|irandom_range)\b(?=\s*\()/,
         relevance: 0
       }
+    ]
+  };
+
+  const gmlEnumMode = {
+    className: 'enum',
+    beginKeywords: 'enum',
+    end: /[{;]/,
+    excludeEnd: true,
+    contains: [
+      hljs.inherit(hljs.TITLE_MODE, { begin: /\b[A-Za-z_]\w*\b/ })
+    ]
+  };
+
+  const gmlEnumEntryMode = {
+    className: 'enumentry',
+    variants: [
+      // enum declaration members
+      { begin: /\b[A-Za-z_]\w*(?=\s*=)/ },
+      // enum usage: .VALUE
+      { begin: /\.\s*\b[A-Za-z_]\w*\b/ }
     ]
   };
 
@@ -67,19 +85,21 @@ function hljsDefineGML(hljs) {
         'true false undefined noone self other all global local'
     },
     contains: [
-      hljs.C_LINE_COMMENT_MODE,    // // comments
-      hljs.C_BLOCK_COMMENT_MODE,   // /* ... */
+      hljs.C_LINE_COMMENT_MODE,
+      hljs.C_BLOCK_COMMENT_MODE,
       {
-        className: 'doctag',       // /// doc-comments
+        className: 'doctag',
         begin: '///',
         end: '$',
         relevance: 10
       },
-      gmlStringMode,               // strings
-      gmlNumberMode,               // numbers
-      gmlConstantMode,             // constants
-      gmlBuiltinVariableMode,      // instance & argument vars
-      gmlFunctionMode              // functions (built-in & user)
+      gmlEnumMode,
+      gmlStringMode,
+      gmlNumberMode,
+      gmlConstantMode,
+      gmlBuiltinVariableMode,
+      gmlFunctionMode,
+      gmlEnumEntryMode
     ]
   };
 }
