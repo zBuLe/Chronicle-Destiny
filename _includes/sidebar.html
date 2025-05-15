@@ -3,18 +3,20 @@
     <div class="site-header">
         <h1>{{ site.title }}</h1>
     </div>
+
+    <!-- Dynamic navigation -->
     <nav>
         <ul>
-            <li><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li><a href="#">Getting Started</a></li>
-            <li><a href="#">Examples</a></li>
-            <li><a href="#">API Reference</a></li>
+            {% for item in site.nav %}
+                <li>
+                    <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                </li>
+            {% endfor %}
         </ul>
     </nav>
 
     <!-- Footer with social icons -->
     <div class="panel-footer">
-        <!-- Your social links here -->
         <a href="https://deviantart.com/zbule" target="_blank" title="DeviantArt"><i class="fab fa-deviantart"></i></a>
         <a href="https://instagram.com/zbule" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://bsky.app/profile/zbule.xyz" target="_blank" title="BlueSky"><i class="fa-brands fa-bluesky"></i></a>

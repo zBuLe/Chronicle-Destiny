@@ -1,6 +1,11 @@
 title: My Docs Site
-description: My custom Jekyll theme with Prism
-baseurl: ""
-url: ""
-highlighter: none
-markdown: kramdown
+description: A documentation theme
+nav:
+  - title: Home
+    url: /
+  - title: Getting Started
+    url: /getting-started/
+  - title: Examples
+    url: /examples/
+  - title: API Reference
+    url: /api/
