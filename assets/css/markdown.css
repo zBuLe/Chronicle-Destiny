@@ -272,3 +272,153 @@ main ul.gallery img:hover {
   font-style: italic;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
+
+
+/* =========================
+   GAME CONTAINER
+   ========================= */
+
+
+.game-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  border-radius: 0.5rem;
+}
+
+.game-play-button {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  font-size: 3em;
+  padding: 0.2em 0.6em;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: background 0.2s ease;
+}
+
+.game-play-button:hover {
+  background: var(--hover-color);
+}
+
+/* Fixed-size wrapper for both canvas and overlay */
+.game-wrapper {
+  width: 640px;
+  height: 360px;
+  position: relative;
+  margin: 2rem auto;
+}
+
+/* Overlay positioned exactly over the canvas */
+.game-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+/* Centered play button */
+.game-play-button {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  font-size: 3em;
+  padding: 0.2em 0.6em;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: background 0.2s ease;
+}
+
+.game-play-button:hover {
+  background: var(--hover-color);
+}
+
+/* Wrapper for the game canvas + overlay */
+.game-wrapper {
+  width: 640px;
+  height: 360px;
+  position: relative;
+  margin: 2rem auto;
+}
+
+/* Overlay matches canvas size */
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--line-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Preview image */
+.game-poster {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+/* Play button on top of poster */
+.game-play-button {
+  position: relative;
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  font-size: 3em;
+  padding: 0.2em 0.6em;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: background 0.2s ease;
+}
+
+.game-play-button:hover {
+  background: var(--hover-color);
+}
+
+.game-fullscreen-button {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: var(--line-color);
+  border: none;
+  color: var(--text-color);
+  padding: 0.4em 0.6em;
+  font-size: 1.2em;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0.9;
+  transition: background 0.2s ease;
+}
+
+.game-fullscreen-button:hover {
+  background: var(--hover-color);
+}
