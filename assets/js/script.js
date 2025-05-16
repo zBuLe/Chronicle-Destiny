@@ -202,33 +202,29 @@ document.addEventListener('DOMContentLoaded', () => {
 // GAMEMAKER
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Elements
   const playBtn = document.getElementById('gamePlayButton');
   const overlay = document.getElementById('gameOverlay');
   const gameWrapper = document.getElementById('gm4html5_div_id');
   const fullscreenBtn = document.getElementById('gameFullscreenButton');
 
-  // Game load on play
   if (playBtn && overlay && gameWrapper) {
     playBtn.addEventListener('click', () => {
-      overlay.style.display = 'none';      // Hide the play overlay
-      gameWrapper.style.display = 'block'; // Show canvas wrapper
+      overlay.style.display = 'none';
+      gameWrapper.style.display = 'block';
 
-      // Dynamically load GameMaker HTML5 export
       const script = document.createElement('script');
       script.src = 'html5game/Chronicle-Destiny.js?cachebust=918507098';
       script.onload = () => {
         if (typeof GameMaker_Init === 'function') {
-          GameMaker_Init(); // Start game once loaded
+          GameMaker_Init();
         } else {
-          console.error('GameMaker_Init() is not defined.');
+          console.error('GameMaker_Init is not defined.');
         }
       };
       document.body.appendChild(script);
     });
   }
 
-  // Fullscreen toggle button
   if (fullscreenBtn && gameWrapper) {
     fullscreenBtn.addEventListener('click', () => {
       if (!document.fullscreenElement) {
