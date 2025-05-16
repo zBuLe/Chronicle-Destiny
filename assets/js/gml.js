@@ -14,13 +14,12 @@ function hljsDefineGML(hljs) {
   const gmlStringMode = {
     className: 'string',
     variants: [
-      { begin: /@"/, end: /"/, contains: [] },
-      { begin: /\$"/, end: /"/, contains: [] },
+      { begin: /@"/, end: /"/ },
+      { begin: /\$"/, end: /"/ },
       hljs.QUOTE_STRING_MODE
     ]
   };
 
-  // ✅ Enum fix: removed end + excludeEnd
   const gmlEnumMode = {
     beginKeywords: 'enum',
     contains: [{ className: 'enum', begin: /\w+/ }]
@@ -109,7 +108,7 @@ function hljsDefineGML(hljs) {
       variants: [
         { begin: /\b(?:show_message|show_debug_message|keyboard_check|keyboard_check_pressed|instance_create_layer|instance_destroy|irandom_range|string|array_create)\b/ }
       ],
-      relevance: 0    // ✅ final polish
+      relevance: 0
     },
     {
       className: 'function',
@@ -171,4 +170,9 @@ function hljsDefineGML(hljs) {
       gmlObjectVariableMode
     ]
   };
+}
+
+// Register with highlight.js (auto-init fallback)
+if (typeof hljs !== 'undefined') {
+  hljs.registerLanguage('gml', hljsDefineGML);
 }

@@ -1,8 +1,7 @@
 <aside class="sidebar collapsed" id="sidebar">
-    <div class="panel-spacer"></div>
-    <div class="site-header">
-        <h1>{{ site.title }}</h1>
-    </div>
+    <div class="panel-spacer site-title-spacer">
+  <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+</div>
 
     <!-- Dynamic navigation -->
     <nav>
@@ -17,14 +16,14 @@
 
     <!-- Footer with social icons -->
     <div class="panel-footer">
-        <a href="https://deviantart.com/zbule" target="_blank" title="DeviantArt"><i class="fab fa-deviantart"></i></a>
-        <a href="https://instagram.com/zbule" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://bsky.app/profile/zbule.xyz" target="_blank" title="BlueSky"><i class="fa-brands fa-bluesky"></i></a>
-        <a href="https://twitter.com/zBuLe" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://zbule.itch.io" target="_blank" title="itch.io"><i class="fa-brands fa-itch-io"></i></a>
-        <a href="https://twitch.tv/zbule" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
-        <a href="https://youtube.com/@bluestar03" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="https://ko-fi.com/zbule" target="_blank" title="Ko-fi"><i class="fa-solid fa-mug-hot"></i></a>
-        <p>Version 1.0<br>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
-    </div>
+        {% if site.social %}
+  {% for item in site.social %}
+    <a href="{{ item.url }}" target="_blank" title="{{ item.title }}">
+      <i class="{{ item.icon }}"></i>
+    </a>
+  {% endfor %}
+  {% endif %}
+  <p>Version 1.0<br>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+</div>
+
 </aside>

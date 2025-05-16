@@ -1,27 +1,21 @@
-<!-- head.html -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
 
-<!-- Font Awesome Kit -->
-<script src="https://kit.fontawesome.com/fe2b0ce82c.js" crossorigin="anonymous"></script>
-
-<!-- Theme Styles -->
+<!-- Site Theme Styles -->
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/gml.css' | relative_url }}">
 
+<!-- Font Awesome (Icon Kit) -->
+<script src="https://kit.fontawesome.com/fe2b0ce82c.js" crossorigin="anonymous"></script>
 
-<!-- highlight.js theme (choose any, monokai looks great for code) -->
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css"> -->
-
-<!-- highlight.js core -->
+<!-- Highlight.js syntax highlighter -->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
-<!-- your custom gml language -->
+<!-- Custom language: GML -->
 <script src="{{ '/assets/js/gml.js' | relative_url }}"></script>
-
-<script>
-  hljs.registerLanguage('gml', hljsDefineGML);
-  hljs.highlightAll();
-</script>
+<script>hljs.highlightAll();</script>

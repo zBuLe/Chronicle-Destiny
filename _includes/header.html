@@ -1,10 +1,21 @@
-<!-- Topbar with page title -->
-<div class="topbar">
-    <h2>{{ page.title | default: "Page Title" }}</h2>
-</div>
+<header>
+    <!-- Topbar with page title -->
+    <div class="topbar">
+        <h2>{{ page.title | default: site.title }}</h2>
+    </div>
 
-<!-- Left Panel Toggle -->
-<button class="toggle-btn" id="toggleSidebar">☰</button>
+    <!-- Left Panel Toggle -->
+    {% if site.logo %}
+  <!-- Toggle button with logo -->
+  <button id="toggleSidebar" class="toggle-btn" aria-label="Toggle left panel">
+    <img src="{{ site.logo | relative_url }}" alt="Toggle menu" class="toggle-logo">
+  </button>
+{% else %}
+  <!-- Fallback icon toggle -->
+  <button id="toggleSidebar" class="toggle-btn" aria-label="Toggle left panel">☰</button>
+{% endif %}
 
-<!-- Right Panel Toggle -->
-<button class="toggle-btn right" id="toggleRightPanel">☰</button>
+
+    <!-- Right Panel Toggle -->
+    <button class="toggle-btn right" id="toggleRightPanel">📑</button>
+</header>

@@ -1,11 +1,11 @@
 :root {
   /* GML Syntax Colors (Dark Mode) */
-  --gml-none:magenta;
-  
+  --gml-none: magenta;
+
   --gml-text: #C0C0C0;
   --gml-bg: #222222;
   --gml-accent: #039D5B;
-  
+
   --gml-comment: #5B995B;
   --gml-keyword: #FFB871;
   --gml-number: #FF8080;
@@ -13,10 +13,10 @@
   --gml-constant: #FF8080;
   --gml-builtin: #58E55A;
   --gml-function: #FFB871;
-  --gml-global: #FF7EFF;  
+  --gml-global: #FF7EFF;
   --gml-enum: #FF8080;
   --gml-enum-entry: #FF8080;
-  --gml-local: #FFF899;  
+  --gml-local: #FFF899;
   --gml-static: #FFF899;
   --gml-braces: #FFB871;
   --gml-resource: #FF8080;
@@ -27,22 +27,21 @@
 }
 
 [data-theme="light"] {
-
   --gml-text: #333333;
   --gml-bg: #E0E0E0;
   --gml-accent: #2AAE96;
-  
-  --gml-comment: #027F00;  
+
+  --gml-comment: #027F00;
   --gml-keyword: #0004F7;
   --gml-number: #FF3030;
   --gml-string: #000099;
   --gml-constant: #7F4C4C;
   --gml-builtin: #B20000;
   --gml-function: #990000;
-  --gml-global: #113C77;  
+  --gml-global: #113C77;
   --gml-enum: #B26B6B;
   --gml-enum-entry: #995B5B;
-  --gml-local: #4C4CFF;  
+  --gml-local: #4C4CFF;
   --gml-static: #4C4CFF;
   --gml-braces: #0004F7;
   --gml-resource: #CC7A7A;
@@ -52,30 +51,35 @@
   --gml-macro: #B20000;
 }
 
-pre:has(.language-gml)  {
+/* Code block container */
+pre:has(.language-gml) {
   background-color: var(--gml-bg);
-  color:var(--gml-text);
+  color: var(--gml-text);
   border: 2px solid var(--gml-accent);
 }
 
-.code-header[data-language="gml"] { background: var(--gml-accent); }
+/* Code header color override */
+.code-header[data-language="gml"] {
+  background: var(--gml-accent);
+}
 
-.language-gml .hljs-comment { color: var(--gml-comment); }
-.language-gml .hljs-keyword { color: var(--gml-keyword); font-weight: bold  }
-.language-gml .hljs-number { color: var(--gml-number);  }
-.language-gml .hljs-string { color: var(--gml-string); }
-.language-gml .hljs-constant { color: var(--gml-constant); }
-.language-gml .hljs-built_in { color: var(--gml-builtin); }
-.language-gml .hljs-function { color: var(--gml-function); }
-.language-gml .hljs-title { color: var(--gml-function); }
-.language-gml .hljs-global { color: var(--gml-global); }
-.language-gml .hljs-enum { color: var(--gml-enum); }
-.language-gml .hljs-enumentry { color: var(--gml-enum-entry); }
-.language-gml .hljs-local { color: var(--gml-local);}
-.language-gml .hljs-static { color: var(--gml-static); }
-.language-gml .hljs-symbol { color: var(--gml-braces); font-weight: bold;}
-.language-gml .hljs-resource { color: var(--gml-resource); }
-.language-gml .hljs-scriptname { color: var(--gml-script);}
-.language-gml .hljs-operator { color: var(--gml-operator); font-weight: bold; }
-.language-gml .hljs-objectvar { color: var(--gml-objectvar); }
-.language-gml .hljs-macro { color: var(--gml-macro); }
+/* Highlight.js token mappings */
+.language-gml .hljs-comment       { color: var(--gml-comment); }
+.language-gml .hljs-keyword       { color: var(--gml-keyword); font-weight: bold; }
+.language-gml .hljs-number        { color: var(--gml-number); }
+.language-gml .hljs-string        { color: var(--gml-string); }
+.language-gml .hljs-constant      { color: var(--gml-constant); }
+.language-gml .hljs-built_in      { color: var(--gml-builtin); }
+.language-gml .hljs-function      { color: var(--gml-function); }
+.language-gml .hljs-title         { color: var(--gml-function); }
+.language-gml .hljs-global        { color: var(--gml-global); }
+.language-gml .hljs-enum          { color: var(--gml-enum); }
+.language-gml .hljs-enumentry     { color: var(--gml-enum-entry); }
+.language-gml .hljs-local         { color: var(--gml-local); }
+.language-gml .hljs-static        { color: var(--gml-static); }
+.language-gml .hljs-symbol        { color: var(--gml-braces); font-weight: bold; }
+.language-gml .hljs-resource      { color: var(--gml-resource); }
+.language-gml .hljs-scriptname    { color: var(--gml-script); }
+.language-gml .hljs-operator      { color: var(--gml-operator); font-weight: bold; }
+.language-gml .hljs-objectvar     { color: var(--gml-objectvar); }
+.language-gml .hljs-macro         { color: var(--gml-macro); }
