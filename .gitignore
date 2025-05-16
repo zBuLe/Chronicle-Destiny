@@ -1,0 +1,26 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler
+vendor/
+.bundle/
+Gemfile.lock
+
+# VS Code
+.vscode/
+
+# WSL
+*.swp
+.DS_Store
+
+# Node (if using any JS tooling)
+node_modules/
+
+# System
+*.log
+*.tmp
+
+Gemfile
