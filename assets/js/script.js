@@ -116,3 +116,84 @@ if (tocList) {
     tocList.appendChild(li);
   });
 }
+
+
+// === Lightbox viewer ===
+document.addEventListener('DOMContentLoaded', () => {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('.lightbox-img');
+  const captionBox = lightbox.querySelector('.lightbox-caption');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+
+  let currentGallery = [];
+  let currentIndex = -1;
+
+  // Show image by index, with wrap-around
+  function showImage(index) {
+    if (!currentGallery.length) return;
+
+    const total = currentGallery.length;
+    if (index < 0) index = total - 1;
+    if (index >= total) index = 0;
+
+    const link = currentGallery[index];
+    lightboxImg.src = link.href;
+    lightboxImg.alt = link.title || '';
+    captionBox.textContent = link.title || '';
+    lightbox.classList.remove('hidden');
+    currentIndex = index;
+  }
+
+  // Bind each gallery separately
+  document.querySelectorAll('ul.gallery').forEach(gallery => {
+    const links = Array.from(gallery.querySelectorAll('a'));
+
+    links.forEach((link, index) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentGallery = links;
+        showImage(index);
+      });
+    });
+  });
+
+  // Close on X button
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.add('hidden');
+    lightboxImg.src = '';
+    captionBox.textContent = '';
+  });
+
+  // Close on background click
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.add('hidden');
+      lightboxImg.src = '';
+      captionBox.textContent = '';
+    }
+  });
+
+  // Navigate with arrow keys or Escape
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('hidden')) return;
+
+    if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+    if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+    if (e.key === 'Escape') {
+      lightbox.classList.add('hidden');
+      lightboxImg.src = '';
+      captionBox.textContent = '';
+    }
+  });
+
+  // Click left/right side of screen
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target === lightboxImg) {
+      const boxWidth = lightbox.clientWidth;
+      const clickX = e.clientX;
+
+      if (clickX < boxWidth * 0.33) showImage(currentIndex - 1);
+      else if (clickX > boxWidth * 0.66) showImage(currentIndex + 1);
+    }
+  });
+});
