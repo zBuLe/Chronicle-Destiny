@@ -422,3 +422,8 @@ main ul.gallery img:hover {
 .game-fullscreen-button:hover {
   background: var(--hover-color);
 }
+
+.gm4html5_div_class:fullscreen canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+}
