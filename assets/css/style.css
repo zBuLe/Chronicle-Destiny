@@ -330,17 +330,48 @@ a:hover {
 
 
 /* =========================
-   Responsive (Optional)
+   Responsive (EM-based)
    ========================= */
-@media (max-width: 768px) {
-  .sidebar, .right-panel { width: 200px; }
-  .sidebar.collapsed { transform: translateX(-200px); }
-  .right-panel.collapsed { transform: translateX(200px); }
-  body.left-open .topbar { transform: translateX(200px); }
-  body.right-open .topbar { transform: translateX(-200px); }
-  body.left-open.right-open .topbar { transform: translateX(0); }
-  body.left-open .content { transform: translateX(200px); }
-  body.right-open .content { transform: translateX(-200px); }
-  body.left-open.right-open .content { transform: translateX(0); }
-  .content { padding: 1rem; max-width: 95%; }
+@media (max-width: 64em) {  /* 768px ÷ 12px = 64em */
+  .sidebar,
+  .right-panel {
+    width: var(--panel-width);
+  }
+
+  .sidebar.collapsed {
+    transform: translateX(calc(-1 * var(--panel-width)));
+  }
+
+  .right-panel.collapsed {
+    transform: translateX(var(--panel-width));
+  }
+
+  body.left-open .topbar {
+    transform: translateX(var(--panel-width));
+  }
+
+  body.right-open .topbar {
+    transform: translateX(calc(-1 * var(--panel-width)));
+  }
+
+  body.left-open.right-open .topbar {
+    transform: translateX(0);
+  }
+
+  body.left-open .content {
+    transform: translateX(var(--panel-width));
+  }
+
+  body.right-open .content {
+    transform: translateX(calc(-1 * var(--panel-width)));
+  }
+
+  body.left-open.right-open .content {
+    transform: translateX(0);
+  }
+
+  .content {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
 }
