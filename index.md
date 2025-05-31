@@ -16,7 +16,7 @@ title: Chronicle Destiny
   </div>
   <button class="game-fullscreen-button" id="gameFullscreenButton" title="Toggle Fullscreen">⛶</button>
 </div>
-<script id="gameScript" type="text/javascript" src="html5game/Chronicle-Destiny.js?cachebust=982318196"></script>
+<script id="gameScript" type="text/javascript" src="html5game/Chronicle-Destiny.js?cachebust=824596357"></script>
 
 
 

@@ -27,3 +27,5 @@ vspd=vs;
 
 x+=hspd;
 y+=vspd;
+
+rx++
